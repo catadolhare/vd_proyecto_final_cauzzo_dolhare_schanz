@@ -44,7 +44,7 @@
             <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
             <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
         </div>
-        <div class="grafico_paises">
+        <div class="texto-paises">
             <p>hola</p>
         </div>
     </div>
@@ -55,19 +55,20 @@
             <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
             <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
         </div>
-        <div class="grafico_paises">
+        <div class="texto-paises">
             <p>hola</p>
         </div>
     </div>
     <div class="paises">
-        <div class="graficos_paises">
+        <div class="grafico_paises">
             <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
 
             <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
             <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
         </div>
-        <div class="grafico_paises">
+        <div class="texto-paises">
             <p>hola</p>
+        </div>
     </div> 
 </main>
 
@@ -135,22 +136,30 @@
     }
     .paises{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 10px;
         flex-direction: row;
         justify-content: center;
         background-color: aliceblue;
     }
     .grafico_paises{
-        flex: 1; /* Ocupa una parte de la pantalla, se ajusta según el contenido */
         padding: 0 10px;
+        width: 50%;
         display: flex; /* Para centrar la imagen dentro de la columna */
+        flex-direction: column;
         background-image: url(images/fondo_paises.png); /* Solo para visualización */
+    }
+    .grafico_paises iframe{
+        width: 85%;
+        height: auto;
+    }
+    .texto-paises{
+        width: 50%;
     }
     .aclaracion{
         font-style: italic;
         font-size: 15px;
         margin: 0;
+        color: white;
     }
 </style>
