@@ -127,10 +127,18 @@
         line-height: 35px;
     }
     .paises{
-        margin: 10px 250px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
     }
     .grafico_paises{
-        margin: 10px 0;
+        flex: 1; /* Ocupa una parte de la pantalla, se ajusta según el contenido */
+        padding: 0 10px;
+        display: flex; /* Para centrar la imagen dentro de la columna */
+        background-image: url(images/fondo_paises.png); /* Solo para visualización */
     }
     .aclaracion{
         font-style: italic;
