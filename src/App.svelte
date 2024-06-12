@@ -39,48 +39,51 @@
             </div>
         </div>
     </div>
-    <div class="paises">
-        <div class="grafico_paises">
-            <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-
-            <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
-            <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
-        </div>
-        <div class="info-mundial">
-            <div class="texto-paises">
-                <h3>1978</h3>
-                <p>, contó con la participación de 16 países. Este torneo fue notable por la gran competencia y el ambiente festivo que se vivió. Argentina se coronó campeona del mundo por primera vez en su historia, tras vencer a Países Bajos en el Monumental.</p>
+    <div class="mundiales">
+        <h2>El mundo unido por una pasión</h2>
+        <div class="paises">
+            <div class="grafico_paises">
+                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+    
+                <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
+                <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
             </div>
-            <img src="images/foto1978.png" alt="">
-        </div>
-        
-    </div>
-    <div class="paises">
-        <div class="info-mundial">
-            <div class="texto-paises">
-                <h3>1986</h3>
-                <p>, celebrado en México, reunió a 24 equipos de diversas partes del mundo. Este torneo es recordado por las actuaciones estelares de Diego Maradona, incluyendo su famoso "Gol del Siglo" y la "Mano de Dios". Argentina venció a Alemania y se consgró campeona nuevamente. </p>
+            <div class="info-mundial">
+                <div class="texto-paises">
+                    <h3>1978</h3>
+                    <p>, contó con la participación de 16 países. Este torneo fue notable por la gran competencia y el ambiente festivo que se vivió. Argentina se coronó campeona del mundo por primera vez en su historia, tras vencer a Países Bajos en el Monumental.</p>
+                </div>
+                <img src="images/foto1978.png" alt="">
             </div>
-            <img src="images/foto1986.png" alt="">
+            
         </div>
-        <div class="grafico_paises">
-            <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-            <p class='aclaracion'>*Alemania Occidental puesto numero 2</p>
-            <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
-            <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
-        </div>
-    </div>
-    <div class="paises">
-        <div class="grafico_paises">
-            <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-            <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
-        </div>
-        <div class="info-mundial">
-            <div class="texto-paises">
-                <h3>2022</h3>
-                <p>, organizado en Qatar, el primer torneo mundialista realizado en el Medio Oriente y durante los meses de noviembre y diciembre, con 32 selecciones, notable por sus innovaciones tecnológicas y su enfoque en la sostenibilidad. Argentina se coronó campeona por tercera vez, venciendo a Francia en una final épica.</p>
+        <div class="paises">
+            <div class="info-mundial">
+                <div class="texto-paises">
+                    <h3>1986</h3>
+                    <p>, celebrado en México, reunió a 24 equipos de diversas partes del mundo. Este torneo es recordado por las actuaciones estelares de Diego Maradona, incluyendo su famoso "Gol del Siglo" y la "Mano de Dios". Argentina venció a Alemania y se consgró campeona nuevamente. </p>
+                </div>
+                <img src="images/foto1986.png" alt="">
             </div>
-            <img src="images/foto2022.png" alt="">
+            <div class="grafico_paises">
+                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                <p class='aclaracion'>*Alemania Occidental puesto numero 2</p>
+                <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
+                <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
+            </div>
+        </div>
+        <div class="paises">
+            <div class="grafico_paises">
+                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
+            </div>
+            <div class="info-mundial">
+                <div class="texto-paises">
+                    <h3>2022</h3>
+                    <p>, organizado en Qatar, el primer torneo mundialista realizado en el Medio Oriente y durante los meses de noviembre y diciembre, con 32 selecciones, notable por sus innovaciones tecnológicas y su enfoque en la sostenibilidad. Argentina se coronó campeona por tercera vez, venciendo a Francia en una final épica.</p>
+                </div>
+                <img src="images/foto2022.png" alt="">
+            </div>
         </div>
     </div> 
 </main>
@@ -110,6 +113,9 @@
         font-variation-settings:
             "wdth" 100;
         text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+        color: #2A1552;
     }
     h3{
         font-family: "Fredoka", sans-serif;
@@ -118,6 +124,7 @@
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
+        font-size: 50px;
     }
     .intro{
         display: flex;
@@ -157,6 +164,9 @@
         justify-content: center;
         line-height: 35px;
     }
+    .mundiales{
+        padding-top: 30px;
+    }
     .paises{
         display: flex;
         justify-content: space-between;
@@ -164,7 +174,7 @@
         flex-direction: row;
         justify-content: center;
         margin: 10px 100px;
-        padding: 20px 0;
+        padding: 10px 0;
     }
     .grafico_paises{
         padding: 0 20px;
@@ -190,7 +200,7 @@
     .texto-paises h3{
         display: inline;
         color: #FAFF00;
-        font-size: 50px;
+        
     }
     .texto-paises p{
         display: inline;
