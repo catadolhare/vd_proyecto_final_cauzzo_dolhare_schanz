@@ -4,6 +4,11 @@
     import { onMount } from "svelte";
     let count, index, offset, progress;
     let top = 0.1, threshold = 0.5, bottom = 0.9;
+    let showInfo = false;
+
+    function toggleInfo() {
+        showInfo = !showInfo;
+    }
 </script>
 <main>
     <head>
@@ -27,7 +32,19 @@
             <h5>¿En qué se diferecian y en qué se asemejan?</h5>
         </div>
         <div class="player">
-            <img src="https://t3.ftcdn.net/jpg/05/03/75/98/360_F_503759828_kadMu7Zxbk9jNrZE1JjFfVwkkgxqe6KS.jpg" alt="Player">
+            <button class="button" on:click={toggleInfo}>
+                Tocá para musicalizar
+            </button>
+            {#if showInfo}
+                <div class="alert-overlay">
+                    <div class="alert-box">
+                        <button class="close-button" on:click={toggleInfo}></button>
+                        <h2>Alerta</h2>
+                        <p>Esta es una alerta con información importante.</p>
+                        <button class="button" on:click={toggleInfo}>Cerrar</button>
+                    </div>
+                </div>
+            {/if}
         </div>
     </div>
     <div class="fondo_intro2">
@@ -140,14 +157,15 @@
         align-items: flex-start;
         flex-direction: row;
         justify-content: center;
-        background-color: aliceblue;
     }
     .grafico_paises{
         padding: 0 10px;
         width: 50%;
+        height: 70%;
         display: flex; /* Para centrar la imagen dentro de la columna */
         flex-direction: column;
-        background-image: url(images/fondo_paises.png); /* Solo para visualización */
+        background-image: url(images/fondo_pais.png); /* Solo para visualización */
+        background-size: 100%; /* Ajusta el tamaño de la imagen de fondo al 50% del contenedor */
     }
     .grafico_paises iframe{
         width: 85%;
@@ -162,4 +180,51 @@
         margin: 0;
         color: white;
     }
+    .button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .alert-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
 </style>
