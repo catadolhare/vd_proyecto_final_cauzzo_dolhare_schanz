@@ -4,6 +4,20 @@
     import { onMount } from "svelte";
     let count, index, offset, progress;
     let top = 0.1, threshold = 0.5, bottom = 0.9;
+    let showInfo = false;
+
+    function toggleInfo() {
+        showInfo = !showInfo;
+    }
+    let audio;
+
+    function playAudio() {
+        audio.play();
+    }
+    let audioEstateItaliana;
+    let audioWakawaka;
+    let audioWeareone;
+    let audioLacopavida;
 </script>
 <main>
     <head>
@@ -26,9 +40,76 @@
             <h5>¿Qué los hizo ganar?</h5>
             <h5>¿En qué se diferecian y en qué se asemejan?</h5>
         </div>
-        <div class="player">
-            <img src="https://t3.ftcdn.net/jpg/05/03/75/98/360_F_503759828_kadMu7Zxbk9jNrZE1JjFfVwkkgxqe6KS.jpg" alt="Player">
-        </div>
+        <button class="button" on:click={toggleInfo}>
+            <h5 style="color: #DBED0B; font-style: bold;">Tocá para musicalizar</h5>
+        </button>
+        {#if showInfo}
+            <div class="alert-overlay">
+                <div class="alert-box">
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/shakira.jpg" alt="shakira">
+                        </div>
+                        <div class="cancion">
+                            <h2>Waka Waka</h2>
+                        </div>
+                        <div class="artista">
+                                <p>Shakira</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioWakawaka.play()}>Play</button>
+                        </div>
+                    </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/gianna.jpg" alt="GiannaEdoardo">
+                        </div>
+                        <div class="cancion">
+                            <h2>Un'Estate Italiana</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Gianna Nannini & Edoardo Bennato</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioEstateItaliana.play()}>Play</button>
+                        </div>
+                    </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/pitbull.jpg" alt="pitbull">
+                        </div>
+                        <div class="cancion">
+                            <h2>We are one</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioWeareone.play()}>Play</button>
+                        </div>
+                    </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/ricky.jpg" alt="Ricky">
+                        </div>
+                        <div class="cancion">
+                            <h2>La copa de la vida</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Ricky Martin</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioLacopavida.play()}>Play</button>
+                        </div>
+                    </div>
+                    <button class="button" on:click={toggleInfo}>Cerrar</button>
+                </div>
+            </div>
+        {/if}
     </div>
     <div class="fondo_intro2">
         <div class="intro2">
@@ -131,6 +212,14 @@
             "wdth" 100;
         font-size: 50px;
     }
+    h5{
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
     .intro{
         display: flex;
         flex-direction: column;
@@ -141,14 +230,6 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
-    }
-    .player{
-        width: 30%;
-        margin: 5px 0;
-    }
-    .player img{
-        width: 100%;
-        height: auto;
     }
     .intro2{
         display: flex;
@@ -174,9 +255,14 @@
     }
     .paises{
         display: flex;
+<<<<<<< Updated upstream
         justify-content: space-between;
+=======
+        justify-content: space-between; /* Distribuir las columnas con espacio entre ellas */
+>>>>>>> Stashed changes
         align-items: flex-start;
         flex-direction: row;
+<<<<<<< Updated upstream
         justify-content: center;
         margin: 10px 100px;
         padding: 10px 0;
@@ -184,10 +270,12 @@
     .grafico_paises{
         padding: 0 20px;
         width: 50%;
+        height: 70%;
         display: flex; /* Para centrar la imagen dentro de la columna */
         flex-direction: column;
         background-image: url(images/fondo_paises.png); /* Solo para visualización */
         margin: 0 10px;
+        background-size: 100%; /* Ajusta el tamaño de la imagen de fondo al 50% del contenedor */
     }
     .grafico_paises iframe{
         width: 85%;
@@ -214,6 +302,16 @@
     .info-mundial img{
         width: 50%;
         height: auto;
+=======
+        background-color: aliceblue;
+        padding: 20px;
+    }
+    .grafico_paises{
+        flex: 1; /* Cada columna ocupa una parte igual del espacio disponible */
+        padding: 10px;
+        background-image: url(images/fondo_paises.png); /* Solo para visualización */
+        
+>>>>>>> Stashed changes
     }
     .aclaracion{
         font-style: italic;
@@ -221,18 +319,89 @@
         margin: 0;
         color: white;
     }
-    .protagonistas{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 20px 0;
-    }
-    .protagonistas1978{
-        background-image: url("images/fondo1.png");
-        background-size: cover;
-        background-position: center;
-        height: 150vh;
-        width: 100%;
-    }
+    .button {
+    padding: 10px 20px;
+    background-color:  #2A1552;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-content: center;
+
+  }
+
+  .button:hover {
+    background-color:#007BFF;
+  }
+  
+  .alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .alert-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    background-color:#2A1552;
+  }
+  .canciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height:50%;
+  }
+  .foto_canciones{
+    width:25%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .foto_canciones img{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .cancion{
+    width:50%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .artista{
+    width:20%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .boton_cancion{
+    width:5%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .button_canciones {
+    padding: 10px 20px;
+    background-color:  green;
+    cursor: pointer;
+    border-radius: 5px;
+    align-content: center;
+  }
+
 </style>
