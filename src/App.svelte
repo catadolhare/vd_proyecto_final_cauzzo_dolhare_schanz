@@ -212,14 +212,6 @@
             "wdth" 100;
         font-size: 50px;
     }
-    h5{
-        font-family: "Fredoka", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
     .intro{
         display: flex;
         flex-direction: column;
@@ -255,14 +247,9 @@
     }
     .paises{
         display: flex;
-<<<<<<< Updated upstream
         justify-content: space-between;
-=======
-        justify-content: space-between; /* Distribuir las columnas con espacio entre ellas */
->>>>>>> Stashed changes
         align-items: flex-start;
         flex-direction: row;
-<<<<<<< Updated upstream
         justify-content: center;
         margin: 10px 100px;
         padding: 10px 0;
@@ -302,16 +289,6 @@
     .info-mundial img{
         width: 50%;
         height: auto;
-=======
-        background-color: aliceblue;
-        padding: 20px;
-    }
-    .grafico_paises{
-        flex: 1; /* Cada columna ocupa una parte igual del espacio disponible */
-        padding: 10px;
-        background-image: url(images/fondo_paises.png); /* Solo para visualización */
-        
->>>>>>> Stashed changes
     }
     .aclaracion{
         font-style: italic;
