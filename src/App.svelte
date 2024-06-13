@@ -85,7 +85,12 @@
                 <img src="images/foto2022.png" alt="">
             </div>
         </div>
-    </div> 
+    </div>
+    <div class="protagonistas">
+        <div class="protagonistas1978">
+
+        </div>
+    </div>
 </main>
 
 
@@ -215,5 +220,19 @@
         font-size: 15px;
         margin: 0;
         color: white;
+    }
+    .protagonistas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .protagonistas1978{
+        background-image: url("images/fondo1.png");
+        background-size: cover;
+        background-position: center;
+        height: 150vh;
+        width: 100%;
     }
 </style>
