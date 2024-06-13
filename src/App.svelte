@@ -9,6 +9,15 @@
     function toggleInfo() {
         showInfo = !showInfo;
     }
+    let audio;
+
+    function playAudio() {
+        audio.play();
+    }
+    let audioEstateItaliana;
+    let audioWakawaka;
+    let audioWeareone;
+    let audioLacopavida;
 </script>
 <main>
     <head>
@@ -18,7 +27,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <div class="intro">
         <div class="portada">
@@ -31,21 +40,76 @@
             <h5>¿Qué los hizo ganar?</h5>
             <h5>¿En qué se diferecian y en qué se asemejan?</h5>
         </div>
-        <div class="player">
-            <button class="button" on:click={toggleInfo}>
-                Tocá para musicalizar
-            </button>
-            {#if showInfo}
-                <div class="alert-overlay">
-                    <div class="alert-box">
-                        <button class="close-button" on:click={toggleInfo}></button>
-                        <h2>Alerta</h2>
-                        <p>Esta es una alerta con información importante.</p>
-                        <button class="button" on:click={toggleInfo}>Cerrar</button>
+        <button class="button" on:click={toggleInfo}>
+            <h5 style="color: #DBED0B; font-style: bold;">Tocá para musicalizar</h5>
+        </button>
+        {#if showInfo}
+            <div class="alert-overlay">
+                <div class="alert-box">
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/shakira.jpg" alt="shakira">
+                        </div>
+                        <div class="cancion">
+                            <h2>Waka Waka</h2>
+                        </div>
+                        <div class="artista">
+                                <p>Shakira</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioWakawaka.play()}>Play</button>
+                        </div>
                     </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/gianna.jpg" alt="GiannaEdoardo">
+                        </div>
+                        <div class="cancion">
+                            <h2>Un'Estate Italiana</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Gianna Nannini & Edoardo Bennato</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioEstateItaliana.play()}>Play</button>
+                        </div>
+                    </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/pitbull.jpg" alt="pitbull">
+                        </div>
+                        <div class="cancion">
+                            <h2>We are one</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioWeareone.play()}>Play</button>
+                        </div>
+                    </div>
+                    <div class="canciones">
+                        <div class="foto_canciones">
+                            <img src="images/ricky.jpg" alt="Ricky">
+                        </div>
+                        <div class="cancion">
+                            <h2>La copa de la vida</h2>
+                        </div>
+                        <div class="artista">
+                            <p>Ricky Martin</p>
+                        </div>
+                        <div class="boton_cancion">
+                            <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
+                            <button class="button_canciones" on:click={() => audioLacopavida.play()}>Play</button>
+                        </div>
+                    </div>
+                    <button class="button" on:click={toggleInfo}>Cerrar</button>
                 </div>
-            {/if}
-        </div>
+            </div>
+        {/if}
     </div>
     <div class="fondo_intro2">
         <div class="intro2">
@@ -58,33 +122,46 @@
     </div>
     <div class="paises">
         <div class="grafico_paises">
-            <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-            <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
+            <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+            <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
+            <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
         </div>
-        <div class="texto-paises">
-            <p>hola</p>
+        <div class="info-mundial">
+            <div class="texto-paises">
+                <h3>1978</h3>
+                <p>, contó con la participación de 16 países. Este torneo fue notable por la gran competencia y el ambiente festivo que se vivió. Argentina se coronó campeona del mundo por primera vez en su historia, tras vencer a Países Bajos en el Monumental.</p>
+            </div>
+            <img src="images/foto1978.png" alt="">
         </div>
+        
     </div>
     <div class="paises">
+        <div class="info-mundial">
+            <div class="texto-paises">
+                <h3>1986</h3>
+                <p>, celebrado en México, reunió a 24 equipos de diversas partes del mundo. Este torneo es recordado por las actuaciones estelares de Diego Maradona, incluyendo su famoso "Gol del Siglo" y la "Mano de Dios". Argentina venció a Alemania y se consgró campeona nuevamente. </p>
+            </div>
+            <img src="images/foto1986.png" alt="">
+        </div>
         <div class="grafico_paises">
             <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
             <p class='aclaracion'>*Alemania Occidental puesto numero 2</p>
             <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
             <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
         </div>
-        <div class="texto-paises">
-            <p>hola</p>
-        </div>
     </div>
     <div class="paises">
         <div class="grafico_paises">
-            <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-
-            <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
-            <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
+            <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+            <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
         </div>
-        <div class="texto-paises">
-            <p>hola</p>
+        <div class="info-mundial">
+            <div class="texto-paises">
+                <h3>2022</h3>
+                <p>, organizado en Qatar, el primer torneo mundialista realizado en el Medio Oriente y durante los meses de noviembre y diciembre, con 32 selecciones, notable por sus innovaciones tecnológicas y su enfoque en la sostenibilidad. Argentina se coronó campeona por tercera vez, venciendo a Francia en una final épica.</p>
+            </div>
+            <img src="images/foto2022.png" alt="">
         </div>
     </div> 
 </main>
@@ -107,11 +184,29 @@
         color: #2A1552;
     }
     h2{
-        font-family: "Noto Sans KR", sans-serif;
+        font-family: "Fredoka", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 900;
+        font-weight: 700;
         font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
         text-transform: uppercase;
+    }
+    h3{
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    h5{
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
     }
     .intro{
         display: flex;
@@ -123,14 +218,6 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
-    }
-    .player{
-        width: 30%;
-        margin: 5px 0;
-    }
-    .player img{
-        width: 100%;
-        height: auto;
     }
     .intro2{
         display: flex;
@@ -157,22 +244,44 @@
         align-items: flex-start;
         flex-direction: row;
         justify-content: center;
+        margin: 10px 100px;
+        padding: 20px 0;
     }
     .grafico_paises{
-        padding: 0 10px;
+        padding: 0 20px;
         width: 50%;
         height: 70%;
         display: flex; /* Para centrar la imagen dentro de la columna */
         flex-direction: column;
-        background-image: url(images/fondo_pais.png); /* Solo para visualización */
+        background-image: url(images/fondo_paises.png); /* Solo para visualización */
+        margin: 0 10px;
         background-size: 100%; /* Ajusta el tamaño de la imagen de fondo al 50% del contenedor */
     }
     .grafico_paises iframe{
         width: 85%;
         height: auto;
+        margin-top: 40px;
     }
-    .texto-paises{
+    .info-mundial{
         width: 50%;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-paises h3{
+        display: inline;
+        color: #FAFF00;
+        font-size: 50px;
+    }
+    .texto-paises p{
+        display: inline;
+        line-height: 35px;
+    }
+    .info-mundial img{
+        width: 50%;
+        height: auto;
     }
     .aclaracion{
         font-style: italic;
@@ -182,17 +291,19 @@
     }
     .button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color:  #2A1552;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    align-content: center;
+
   }
 
   .button:hover {
-    background-color: #0056b3;
+    background-color:#007BFF;
   }
-
+  
   .alert-overlay {
     position: fixed;
     top: 0;
@@ -214,17 +325,53 @@
     max-width: 500px;
     width: 100%;
     text-align: center;
+    background-color:#2A1552;
   }
-
-  .close-button {
-    background: none;
-    border: none;
+  .canciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height:50%;
+  }
+  .foto_canciones{
+    width:25%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .foto_canciones img{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .cancion{
+    width:50%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .artista{
+    width:20%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .boton_cancion{
+    width:5%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .button_canciones {
+    padding: 10px 20px;
+    background-color:  green;
     cursor: pointer;
-    color: red;
-    font-size: 1.2em;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    border-radius: 5px;
+    align-content: center;
   }
 
 </style>
