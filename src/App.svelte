@@ -12,34 +12,31 @@
     let audio;
     let isPlayingWakawaka = false, isPlayingEstateItaliana = false, isPlayingWeareone = false, isPlayingLacopavida = false;
     let audioEstateItaliana, audioWakawaka, audioWeareone, audioLacopavida;
-    function playAudio(audioElement, setIsPlaying) {
-        if (audioElement.paused) {
-            // Pausar todas las canciones antes de reproducir la nueva
-            if (audioWakawaka && audioWakawaka !== audioElement) {
-                audioWakawaka.pause();
-                isPlayingWakawaka = false;
-            }
-            if (audioEstateItaliana && audioEstateItaliana !== audioElement) {
-                audioEstateItaliana.pause();
-                isPlayingEstateItaliana = false;
-            }
-            if (audioWeareone && audioWeareone !== audioElement) {
-                audioWeareone.pause();
-                isPlayingWeareone = false;
-            }
-            if (audioLacopavida && audioLacopavida !== audioElement) {
-                audioLacopavida.pause();
-                isPlayingLacopavida = false;
-            }
-            
-            // Reproducir la canción seleccionada
-            audioElement.play();
-            setIsPlaying(true);
-        } else {
-            // Si la misma canción está reproduciéndose, detenerla
-            audioElement.pause();
+    let currentAudio = null;
+
+    function playAudio(audioElement, setIsPlaying, isPlaying) {
+        if (currentAudio && currentAudio !== audioElement) {
+            currentAudio.pause();
             setIsPlaying(false);
         }
+        if (audioElement.paused) {
+            audioElement.play();
+            setIsPlaying(true);
+            currentAudio = audioElement;
+        } else {
+            audioElement.pause();
+            setIsPlaying(false);
+            currentAudio = null;
+        }
+    }
+    
+    function stopAllAudio() {
+        if (audioWakawaka) audioWakawaka.pause();
+        if (audioEstateItaliana) audioEstateItaliana.pause();
+        if (audioWeareone) audioWeareone.pause();
+        if (audioLacopavida) audioLacopavida.pause();
+        isPlayingWakawaka = isPlayingEstateItaliana = isPlayingWeareone = isPlayingLacopavida = false;
+        currentAudio = null;
     }
 
 </script>
@@ -103,9 +100,9 @@
                             </div>
                             <div class="boton_cancion">
                                 <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
-                                <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => isPlayingEstateItaliana = playing)}>
+                                <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => isPlayingEstateItaliana = playing, isPlayingEstateItaliana)}>
                                     {#if isPlayingEstateItaliana}
-                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
                                         <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
@@ -126,7 +123,7 @@
                                 <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
                                 <button class="button_canciones" on:click={() => playAudio(audioWeareone, (playing) => isPlayingWeareone = playing)}>
                                     {#if isPlayingWeareone}
-                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
                                         <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
@@ -147,7 +144,7 @@
                                 <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
                                 <button class="button_canciones" on:click={() => playAudio(audioLacopavida, (playing) => isPlayingLacopavida = playing)}>
                                     {#if isPlayingLacopavida}
-                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
                                         <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
@@ -158,6 +155,14 @@
                     </div>
                 </div>
             {/if}
+            <div class="floating-control">
+                <button class="control-button" on:click={stopAllAudio}>
+                    <img src="images/pausa.png" alt="Stop" style="width:25px; height:25px;">
+                </button>
+                <button class="control-button" on:click={toggleInfo}>
+                    <p style="color:white;">Menu</p>
+                </button>
+            </div>
         </div>
     </div>
     <div class="fondo_intro2">
@@ -354,6 +359,7 @@
         cursor: pointer;
         border-radius: 5px;
         align-content: center;
+        margin-top: 20px;
 
     }
 
@@ -432,6 +438,32 @@
         border-radius: 5px;
         align-content: center;
         border: none;
+    }
+    .floating-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .control-button {
+        background-color: #2A1552;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .control-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .control-button:hover {
+        background-color: #007BFF;
     }
 
 </style>
