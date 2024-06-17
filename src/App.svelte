@@ -10,14 +10,38 @@
         showInfo = !showInfo;
     }
     let audio;
-
-    function playAudio() {
-        audio.play();
+    let isPlayingWakawaka = false, isPlayingEstateItaliana = false, isPlayingWeareone = false, isPlayingLacopavida = false;
+    let audioEstateItaliana, audioWakawaka, audioWeareone, audioLacopavida;
+    function playAudio(audioElement, setIsPlaying) {
+        if (audioElement.paused) {
+            // Pausar todas las canciones antes de reproducir la nueva
+            if (audioWakawaka && audioWakawaka !== audioElement) {
+                audioWakawaka.pause();
+                isPlayingWakawaka = false;
+            }
+            if (audioEstateItaliana && audioEstateItaliana !== audioElement) {
+                audioEstateItaliana.pause();
+                isPlayingEstateItaliana = false;
+            }
+            if (audioWeareone && audioWeareone !== audioElement) {
+                audioWeareone.pause();
+                isPlayingWeareone = false;
+            }
+            if (audioLacopavida && audioLacopavida !== audioElement) {
+                audioLacopavida.pause();
+                isPlayingLacopavida = false;
+            }
+            
+            // Reproducir la canción seleccionada
+            audioElement.play();
+            setIsPlaying(true);
+        } else {
+            // Si la misma canción está reproduciéndose, detenerla
+            audioElement.pause();
+            setIsPlaying(false);
+        }
     }
-    let audioEstateItaliana;
-    let audioWakawaka;
-    let audioWeareone;
-    let audioLacopavida;
+
 </script>
 <main>
     <head>
@@ -39,77 +63,102 @@
             <h5>¿Quiénes fueron los protagonistas?</h5>
             <h5>¿Qué los hizo ganar?</h5>
             <h5>¿En qué se diferecian y en qué se asemejan?</h5>
-        </div>
-        <button class="button" on:click={toggleInfo}>
-            <h5 style="color: #DBED0B; font-style: bold;">Tocá para musicalizar</h5>
-        </button>
-        {#if showInfo}
-            <div class="alert-overlay">
-                <div class="alert-box">
-                    <div class="canciones">
-                        <div class="foto_canciones">
-                            <img src="images/shakira.jpg" alt="shakira">
+        
+            <button class="button" on:click={toggleInfo}>
+                <h5 style="color: #DBED0B; font-style: bold;">Tocá para musicalizar</h5>
+            </button>
+            {#if showInfo}
+                <div class="alert-overlay">
+                    <div class="alert-box">
+                        <div class="canciones">
+                            <div class="foto_canciones">
+                                <img src="images/shakira.jpg" alt="shakira">
+                            </div>
+                            <div class="cancion">
+                                <h2>Waka Waka</h2>
+                            </div>
+                            <div class="artista">
+                                    <p>Shakira</p>
+                            </div>
+                            <div class="boton_cancion">
+                                <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
+                                <button class="button_canciones" on:click={() => playAudio(audioWakawaka, (playing) => isPlayingWakawaka = playing)}>
+                                {#if isPlayingWakawaka}
+                                    <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
+                                {:else}
+                                    <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                {/if}
+                                </button>
+                            </div>
                         </div>
-                        <div class="cancion">
-                            <h2>Waka Waka</h2>
+                        <div class="canciones">
+                            <div class="foto_canciones">
+                                <img src="images/gianna.jpg" alt="GiannaEdoardo">
+                            </div>
+                            <div class="cancion">
+                                <h2>Un'Estate Italiana</h2>
+                            </div>
+                            <div class="artista">
+                                <p>Gianna Nannini & Edoardo Bennato</p>
+                            </div>
+                            <div class="boton_cancion">
+                                <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
+                                <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => isPlayingEstateItaliana = playing)}>
+                                    {#if isPlayingEstateItaliana}
+                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                    {:else}
+                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                    {/if}
+                                </button>
+                            </div>
                         </div>
-                        <div class="artista">
-                                <p>Shakira</p>
+                        <div class="canciones">
+                            <div class="foto_canciones">
+                                <img src="images/pitbull.jpg" alt="pitbull">
+                            </div>
+                            <div class="cancion">
+                                <h2>We are one</h2>
+                            </div>
+                            <div class="artista">
+                                <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
+                            </div>
+                            <div class="boton_cancion">
+                                <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
+                                <button class="button_canciones" on:click={() => playAudio(audioWeareone, (playing) => isPlayingWeareone = playing)}>
+                                    {#if isPlayingWeareone}
+                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                    {:else}
+                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                    {/if}
+                                </button>
+                            </div>
                         </div>
-                        <div class="boton_cancion">
-                            <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
-                            <button class="button_canciones" on:click={() => audioWakawaka.play()}>Play</button>
+                        <div class="canciones">
+                            <div class="foto_canciones">
+                                <img src="images/ricky.jpg" alt="Ricky">
+                            </div>
+                            <div class="cancion">
+                                <h2>La copa de la vida</h2>
+                            </div>
+                            <div class="artista">
+                                <p>Ricky Martin</p>
+                            </div>
+                            <div class="boton_cancion">
+                                <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
+                                <button class="button_canciones" on:click={() => playAudio(audioLacopavida, (playing) => isPlayingLacopavida = playing)}>
+                                    {#if isPlayingLacopavida}
+                                        <img src="images/pause.png" alt="Pause" style="width:25px; height:25px;">
+                                    {:else}
+                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                    {/if}
+                                </button>
+                            </div>
                         </div>
+                        <button class="button" on:click={toggleInfo}>Cerrar</button>
                     </div>
-                    <div class="canciones">
-                        <div class="foto_canciones">
-                            <img src="images/gianna.jpg" alt="GiannaEdoardo">
-                        </div>
-                        <div class="cancion">
-                            <h2>Un'Estate Italiana</h2>
-                        </div>
-                        <div class="artista">
-                            <p>Gianna Nannini & Edoardo Bennato</p>
-                        </div>
-                        <div class="boton_cancion">
-                            <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
-                            <button class="button_canciones" on:click={() => audioEstateItaliana.play()}>Play</button>
-                        </div>
-                    </div>
-                    <div class="canciones">
-                        <div class="foto_canciones">
-                            <img src="images/pitbull.jpg" alt="pitbull">
-                        </div>
-                        <div class="cancion">
-                            <h2>We are one</h2>
-                        </div>
-                        <div class="artista">
-                            <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
-                        </div>
-                        <div class="boton_cancion">
-                            <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
-                            <button class="button_canciones" on:click={() => audioWeareone.play()}>Play</button>
-                        </div>
-                    </div>
-                    <div class="canciones">
-                        <div class="foto_canciones">
-                            <img src="images/ricky.jpg" alt="Ricky">
-                        </div>
-                        <div class="cancion">
-                            <h2>La copa de la vida</h2>
-                        </div>
-                        <div class="artista">
-                            <p>Ricky Martin</p>
-                        </div>
-                        <div class="boton_cancion">
-                            <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
-                            <button class="button_canciones" on:click={() => audioLacopavida.play()}>Play</button>
-                        </div>
-                    </div>
-                    <button class="button" on:click={toggleInfo}>Cerrar</button>
                 </div>
-            </div>
-        {/if}
+            {/if}
+        </div>
     </div>
     <div class="fondo_intro2">
         <div class="intro2">
@@ -340,7 +389,7 @@
         justify-content: center;
         align-items: center;
         margin: 10px 0;
-        background-color: aliceblue;
+        background-color: white;
         border-radius: 10px;
         height:50%;
     }
@@ -378,10 +427,11 @@
     }
     .button_canciones {
         padding: 5px 10px;
-        background-color:  green;
+        background-color: white;
         cursor: pointer;
         border-radius: 5px;
         align-content: center;
+        border: none;
     }
 
 </style>
