@@ -222,6 +222,7 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
+        height: 50vh;
     }
     .intro2{
         display: flex;
@@ -297,88 +298,90 @@
         color: white;
     }
     .button {
-    padding: 10px 20px;
-    background-color:  #2A1552;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    align-content: center;
+        padding: 10px 20px;
+        background-color:  #2A1552;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        align-content: center;
 
-  }
+    }
 
-  .button:hover {
-    background-color:#007BFF;
-  }
-  
-  .alert-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
+    .button:hover {
+        background-color:#007BFF;
+    }
 
-  .alert-box {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    background-color:#2A1552;
-  }
-  .canciones{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    background-color: aliceblue;
-    border-radius: 10px;
-    height:50%;
-  }
-  .foto_canciones{
-    width:25%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  .foto_canciones img{
-    width:80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-  .cancion{
-    width:50%;
-    height: auto;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  .artista{
-    width:20%;
-    height: auto;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  .boton_cancion{
-    width:5%;
-    height: auto;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  .button_canciones {
-    padding: 10px 20px;
-    background-color:  green;
-    cursor: pointer;
-    border-radius: 5px;
-    align-content: center;
-  }
+    .alert-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .alert-box {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        background-color:#2A1552;
+    }
+    .canciones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        background-color: aliceblue;
+        border-radius: 10px;
+        height:50%;
+    }
+    .foto_canciones{
+        width:20%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .foto_canciones img{
+        width:80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .cancion{
+        width:45%;
+        height: auto;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .cancion h2{
+        font-size: 30px;
+    }
+    .artista{
+        width:20%;
+        height: auto;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .boton_cancion{
+        width:15%;
+        height: auto;
+        
+    }
+    .button_canciones {
+        padding: 5px 10px;
+        background-color:  green;
+        cursor: pointer;
+        border-radius: 5px;
+        align-content: center;
+    }
 
 </style>
