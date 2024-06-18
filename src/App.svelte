@@ -214,8 +214,33 @@
         </div>
     </div>
     <div class="protagonistas">
-        <div class="protagonistas1978">
-
+        <h2>Los Protagonistas...</h2>
+        <div class="protagonistas-año">
+            <div class="imagen-año">
+                <img src="images/1978.png" alt="1978">
+            </div>
+            <div class="info-año">
+                <p>César Luis Menotti convocó a 22 jugadores para el Mundial de 1978, haciendo una selección que combinaba experiencia y juventud. Su predilecto 4-3-3, combinado con el rendimiento del plantel fue la llave con la que Argentina abrió las puertas del campeonato.</p>
+                <img src="images/tipito1978.png" alt="">
+            </div>
+        </div>
+        <div class="protagonistas-año">
+            <div class="imagen-año">
+                <img src="images/1986.png" alt="1978">
+            </div>
+            <div class="info-año">
+                <p>Los 22 elegidos de Carlos Salvador Bilardo para el mundial 1986 reflejaron su meticulosa y estratégica visión del fútbol. Apostó por un plantel que combinaba talento, disciplina y una fuerte mentalidad competitiva. Esta selección, aunque inicialmente cuestionada por algunos críticos, demostró ser perfecta para ejecutar su esquema táctico, llevando a Argentina a conquistar su segundo campeonato mundial.</p>
+                <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
+            </div>
+        </div>
+        <div class="protagonistas-año">
+            <div class="imagen-año">
+                <img src="images/2022.png" alt="1978">
+            </div>
+            <div class="info-año">
+                <p>La Selección de Scaloni, también llamada "Scaloneta", para el Mundial de 2022 destacó por su diversidad y equilibrio. Lionel Scaloni seleccionó a 26 jugadores, combinando experiencia y juventud. Con un enfoque en la cohesión y el espíritu de equipo, Scaloni logró formar un grupo compacto y versátil.</p>
+                <img src="images/tipito2022.png" alt="">
+            </div>
         </div>
     </div>
 </main>
@@ -279,7 +304,7 @@
         background-image: url("images/fondo1.png");
         background-size: cover;
         background-position: center;
-        height: 150vh; /*Quiero que el tamaño del div tenga el tamaño de la foto de fondo pero no se como, no quiero ajustar manualmente*/
+        height: 150vh;
     }
     .texto{
         text-align: center;
@@ -456,5 +481,31 @@
     .control-button:hover {
         background-color: #007BFF;
     }
-
+    .protagonistas{
+        margin: 10px 100px;
+    }
+    .protagonistas-año{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .imagen-año{
+        position: absolute;
+        width: 45%;
+    }
+    .imagen-año img{
+        width: 100%;
+        height: auto;
+    }
+    .info-año{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .info-año img{
+        width: 25%;
+        height: auto;
+    }
 </style>
