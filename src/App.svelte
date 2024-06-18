@@ -71,11 +71,9 @@
                             <div class="foto_canciones">
                                 <img src="images/shakira.jpg" alt="shakira">
                             </div>
-                            <div class="cancion">
+                            <div class="cancion-artista">
                                 <h2>Waka Waka</h2>
-                            </div>
-                            <div class="artista">
-                                    <p>Shakira</p>
+                                <p>Shakira</p>
                             </div>
                             <div class="boton_cancion">
                                 <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
@@ -92,10 +90,8 @@
                             <div class="foto_canciones">
                                 <img src="images/gianna.jpg" alt="GiannaEdoardo">
                             </div>
-                            <div class="cancion">
+                            <div class="cancion-artista">
                                 <h2>Un'Estate Italiana</h2>
-                            </div>
-                            <div class="artista">
                                 <p>Gianna Nannini & Edoardo Bennato</p>
                             </div>
                             <div class="boton_cancion">
@@ -113,10 +109,8 @@
                             <div class="foto_canciones">
                                 <img src="images/pitbull.jpg" alt="pitbull">
                             </div>
-                            <div class="cancion">
+                            <div class="cancion-artista">
                                 <h2>We are one</h2>
-                            </div>
-                            <div class="artista">
                                 <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
                             </div>
                             <div class="boton_cancion">
@@ -134,10 +128,8 @@
                             <div class="foto_canciones">
                                 <img src="images/ricky.jpg" alt="Ricky">
                             </div>
-                            <div class="cancion">
+                            <div class="cancion-artista">
                                 <h2>La copa de la vida</h2>
-                            </div>
-                            <div class="artista">
                                 <p>Ricky Martin</p>
                             </div>
                             <div class="boton_cancion">
@@ -411,20 +403,19 @@
         height: 80px;
         border-radius: 50%;
     }
-    .cancion{
-        width:45%;
-        height: auto;
-        margin-bottom: 5px;
-        margin-top: 5px;
+    .cancion-artista{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .cancion h2{
+    .cancion-artista h2{
         font-size: 30px;
+        margin: 0;
     }
-    .artista{
-        width:20%;
-        height: auto;
-        margin-bottom: 5px;
-        margin-top: 5px;
+    .cancion-artista p{
+        margin: 0;
     }
     .boton_cancion{
         width:15%;
