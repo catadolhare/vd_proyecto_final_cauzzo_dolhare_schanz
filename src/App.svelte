@@ -13,6 +13,8 @@
     let isPlayingWakawaka = false, isPlayingEstateItaliana = false, isPlayingWeareone = false, isPlayingLacopavida = false;
     let audioEstateItaliana, audioWakawaka, audioWeareone, audioLacopavida;
     let currentAudio = null;
+    let showFloatingControl = false;
+    let isPaused = true;
 
     function playAudio(audioElement, setIsPlaying, isPlaying) {
         if (currentAudio && currentAudio !== audioElement) {
@@ -23,11 +25,14 @@
             audioElement.play();
             setIsPlaying(true);
             currentAudio = audioElement;
+            isPaused = false;
         } else {
             audioElement.pause();
             setIsPlaying(false);
             currentAudio = null;
+            isPaused = true;
         }
+        showFloatingControl = true;
     }
     
     function stopAllAudio() {
@@ -37,10 +42,15 @@
         if (audioLacopavida) audioLacopavida.pause();
         isPlayingWakawaka = isPlayingEstateItaliana = isPlayingWeareone = isPlayingLacopavida = false;
         currentAudio = null;
+        isPaused = true;
     }
 
 </script>
 <main>
+    <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
+    <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
+    <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
+    <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,13 +86,12 @@
                                 <p>Shakira</p>
                             </div>
                             <div class="boton_cancion">
-                                <audio bind:this={audioWakawaka} src="canciones/wakawaka.mp3"></audio>
                                 <button class="button_canciones" on:click={() => playAudio(audioWakawaka, (playing) => isPlayingWakawaka = playing)}>
-                                {#if isPlayingWakawaka}
-                                    <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
-                                {:else}
-                                    <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
-                                {/if}
+                                    {#if isPlayingWakawaka}
+                                        <img src="images/pausa_violeta.png" alt="Pause" style="width:25px; height:25px;">
+                                    {:else}
+                                        <img src="images/play_violeta.png" alt="Play" style="width:25px; height:25px;">
+                                    {/if}
                                 </button>
                             </div>
                         </div>
@@ -95,12 +104,11 @@
                                 <p>Gianna Nannini & Edoardo Bennato</p>
                             </div>
                             <div class="boton_cancion">
-                                <audio bind:this={audioEstateItaliana} src="canciones/estate_italiana.mp3"></audio>
-                                <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => isPlayingEstateItaliana = playing, isPlayingEstateItaliana)}>
+                                <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => isPlayingEstateItaliana = playing)}>
                                     {#if isPlayingEstateItaliana}
-                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa_violeta.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
-                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                        <img src="images/play_violeta.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
                                 </button>
                             </div>
@@ -114,12 +122,11 @@
                                 <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
                             </div>
                             <div class="boton_cancion">
-                                <audio bind:this={audioWeareone} src="canciones/we_are_one.mp3"></audio>
                                 <button class="button_canciones" on:click={() => playAudio(audioWeareone, (playing) => isPlayingWeareone = playing)}>
                                     {#if isPlayingWeareone}
-                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa_violeta.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
-                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                        <img src="images/play_violeta.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
                                 </button>
                             </div>
@@ -133,12 +140,11 @@
                                 <p>Ricky Martin</p>
                             </div>
                             <div class="boton_cancion">
-                                <audio bind:this={audioLacopavida} src="canciones/la_copa_vida.mp3"></audio>
                                 <button class="button_canciones" on:click={() => playAudio(audioLacopavida, (playing) => isPlayingLacopavida = playing)}>
                                     {#if isPlayingLacopavida}
-                                        <img src="images/pausa.png" alt="Pause" style="width:25px; height:25px;">
+                                        <img src="images/pausa_violeta.png" alt="Pause" style="width:25px; height:25px;">
                                     {:else}
-                                        <img src="images/play.png" alt="Play" style="width:25px; height:25px;">
+                                        <img src="images/play_violeta.png" alt="Play" style="width:25px; height:25px;">
                                     {/if}
                                 </button>
                             </div>
@@ -147,14 +153,21 @@
                     </div>
                 </div>
             {/if}
-            <div class="floating-control">
-                <button class="control-button" on:click={stopAllAudio}>
-                    <img src="images/pausa.png" alt="Stop" style="width:25px; height:25px;">
-                </button>
-                <button class="control-button" on:click={toggleInfo}>
-                    <p style="color:white;">Menu</p>
-                </button>
-            </div>
+
+            {#if showFloatingControl}
+                <div class="floating-control">
+                    <button class="control-button" on:click={stopAllAudio}>
+                        {#if isPaused}
+                            <img src="images/play_blanco.png" alt="Play" style="width:20px; height:20px;">
+                        {:else}
+                            <img src="images/pausa_blanco.png" alt="Pause" style="width:25px; height:25px;">
+                        {/if}
+                    </button>
+                    <button class="control-button" on:click={toggleInfo}>
+                        <p style="color:white; font-size: 14px;">Menu</p>
+                    </button>
+                </div>
+            {/if}
         </div>
     </div>
     <div class="fondo_intro2">
@@ -463,6 +476,7 @@
         flex-direction: column;
         gap: 10px;
         z-index: 1000;
+        align-items: center;
     }
 
     .control-button {
