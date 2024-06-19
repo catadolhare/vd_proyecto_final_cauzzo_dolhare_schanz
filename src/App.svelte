@@ -2,8 +2,33 @@
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
     import { onMount } from "svelte";
-    let count, index, offset, progress;
-    let top = 0.1, threshold = 0.5, bottom = 0.9;
+    /* Variables para el scroller1 */
+    let count
+    let index
+    let offset
+    let progress
+    let top = 0.1
+    let threshold = 0.5
+    let bottom = 0.9
+    
+    /* Variables para el scroller 2 */
+    let count2
+    let index2
+    let offset2
+    let progress2
+    let top2 = 0.1
+    let threshold2 = 0.5
+    let bottom2 = 0.9
+
+    /* Variables para el scroller 3 */
+    let count3
+    let index3
+    let offset3
+    let progress3
+    let top3 = 0.1
+    let threshold3 = 0.5
+    let bottom3 = 0.9
+
     let showInfo = false;
 
     function toggleInfo() {
@@ -228,33 +253,93 @@
     </div>
     <div class="protagonistas">
         <h2>Los Protagonistas...</h2>
-        <div class="protagonistas-año">
-            <div class="imagen-año">
-                <img src="images/1978.png" alt="1978">
+        <Scroller
+        top={top}
+        threshold={threshold}
+        bottom={bottom}
+        bind:count={count}
+        bind:index={index}
+        bind:offset={offset}
+        bind:progress={progress}
+        >
+            <div slot="background">
+                <div class="imagen-año">
+                    <img src="images/1978.png" alt="1978">
+                </div>
             </div>
-            <div class="info-año">
-                <p>César Luis Menotti convocó a 22 jugadores para el Mundial de 1978, haciendo una selección que combinaba experiencia y juventud. Su predilecto 4-3-3, combinado con el rendimiento del plantel fue la llave con la que Argentina abrió las puertas del campeonato.</p>
-                <img src="images/tipito1978.png" alt="">
+            <div slot="foreground" class="foreground_container">
+                <section class="step_foreground">
+                    <div class="info-año">
+                        <p>César Luis Menotti convocó a 22 jugadores para el Mundial de 1978, haciendo una selección que combinaba experiencia y juventud. Su predilecto 4-3-3, combinado con el rendimiento del plantel fue la llave con la que Argentina abrió las puertas del campeonato.</p>
+                        <img src="images/tipito1978.png" alt="">
+                    </div>
+                </section>
+                <section class="step_foreground">
+                    <div class="equipo">
+                        <div class="futbolista"></div>
+                    </div>
+                </section>
             </div>
-        </div>
-        <div class="protagonistas-año">
-            <div class="imagen-año">
-                <img src="images/1986.png" alt="1978">
+        </Scroller>
+
+        <Scroller
+        top={top2}
+        threshold={threshold2}
+        bottom={bottom2}
+        bind:count={count2}
+        bind:index={index2}
+        bind:offset={offset2}
+        bind:progress={progress2}
+        >
+            <div slot="background">
+                <div class="imagen-año">
+                    <img src="images/1986.png" alt="1978">
+                </div>
             </div>
-            <div class="info-año">
-                <p>Los 22 elegidos de Carlos Salvador Bilardo para el mundial 1986 reflejaron su meticulosa y estratégica visión del fútbol. Apostó por un plantel que combinaba talento, disciplina y una fuerte mentalidad competitiva. Esta selección, aunque inicialmente cuestionada por algunos críticos, demostró ser perfecta para ejecutar su esquema táctico, llevando a Argentina a conquistar su segundo campeonato mundial.</p>
-                <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
+            <div slot="foreground" class="foreground_container">
+                <section class="step_foreground">
+                    <div class="info-año">
+                        <p>Los 22 elegidos de Carlos Salvador Bilardo para el mundial 1986 reflejaron su meticulosa y estratégica visión del fútbol. Apostó por un plantel que combinaba talento, disciplina y una fuerte mentalidad competitiva. Esta selección, aunque inicialmente cuestionada por algunos críticos, demostró ser perfecta para ejecutar su esquema táctico, llevando a Argentina a conquistar su segundo campeonato mundial.</p>
+                        <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
+                    </div>
+                </section>
+                <section class="step_foreground">
+                    <div class="equipo">
+                        <div class="futbolista"></div>
+                    </div>
+                </section>
             </div>
-        </div>
-        <div class="protagonistas-año">
-            <div class="imagen-año">
-                <img src="images/2022.png" alt="1978">
+        </Scroller>
+
+        <Scroller
+        top={top3}
+        threshold={threshold3}
+        bottom={bottom3}
+        bind:count={count3}
+        bind:index={index3}
+        bind:offset={offset3}
+        bind:progress={progress3}
+        >
+            <div slot="background">
+                <div class="imagen-año">
+                    <img src="images/2022.png" alt="1978">
+                </div>
             </div>
-            <div class="info-año">
-                <p>La Selección de Scaloni, también llamada "Scaloneta", para el Mundial de 2022 destacó por su diversidad y equilibrio. Lionel Scaloni seleccionó a 26 jugadores, combinando experiencia y juventud. Con un enfoque en la cohesión y el espíritu de equipo, Scaloni logró formar un grupo compacto y versátil.</p>
-                <img src="images/tipito2022.png" alt="">
+            <div slot="foreground" class="foreground_container">
+                <section class="step_foreground">
+                    <div class="info-año">
+                        <p>La Selección de Scaloni, también llamada "Scaloneta", para el Mundial de 2022 destacó por su diversidad y equilibrio. Lionel Scaloni seleccionó a 26 jugadores, combinando experiencia y juventud. Con un enfoque en la cohesión y el espíritu de equipo, Scaloni logró formar un grupo compacto y versátil.</p>
+                        <img src="images/tipito2022.png" alt="">
+                    </div>
+                </section>
+                <section class="step_foreground">
+                    <div class="equipo">
+                        <div class="futbolista"></div>
+                    </div>
+                </section>
             </div>
-        </div>
+        </Scroller>
+
     </div>
     <div class="analisis">
         <div class="titulo">
@@ -518,7 +603,7 @@
     }
     .imagen-año{
         position: absolute;
-        width: 45%;
+        max-width: 560px;
     }
     .imagen-año img{
         width: 100%;
@@ -551,6 +636,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .equipo{
+        width: 100%;
+        height: auto;
+    }
+    .futbolista{
+        background-color: red;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
     .footer{
         display: flex;
