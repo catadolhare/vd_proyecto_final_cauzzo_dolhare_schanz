@@ -160,11 +160,11 @@
                         {#if isPaused}
                             <img src="images/play_blanco.png" alt="Play" style="width:20px; height:20px;">
                         {:else}
-                            <img src="images/pausa_blanco.png" alt="Pause" style="width:25px; height:25px;">
+                            <img src="images/pausa_blanco.png" alt="Pause" style="width:20px; height:20px;">
                         {/if}
                     </button>
                     <button class="control-button" on:click={toggleInfo}>
-                        <p style="color:white; font-size: 14px;">Menu</p>
+                        <img src="images/lista.png" alt="Menu" style="width:20px; height:20px;">
                     </button>
                 </div>
             {/if}
