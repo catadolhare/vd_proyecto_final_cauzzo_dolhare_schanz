@@ -262,7 +262,7 @@
         bind:offset={offset}
         bind:progress={progress}
         >
-            <div slot="background">
+            <div slot="background" class="background-scroller">
                 <div class="imagen-año">
                     <img src="images/1978.png" alt="1978">
                 </div>
@@ -276,6 +276,17 @@
                 </section>
                 <section class="step_foreground">
                     <div class="equipo">
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
+                        <div class="futbolista"></div>
                         <div class="futbolista"></div>
                     </div>
                 </section>
@@ -291,7 +302,7 @@
         bind:offset={offset2}
         bind:progress={progress2}
         >
-            <div slot="background">
+            <div slot="background" class="background-scroller">
                 <div class="imagen-año">
                     <img src="images/1986.png" alt="1978">
                 </div>
@@ -320,7 +331,7 @@
         bind:offset={offset3}
         bind:progress={progress3}
         >
-            <div slot="background">
+            <div slot="background" class="background-scroller">
                 <div class="imagen-año">
                     <img src="images/2022.png" alt="1978">
                 </div>
@@ -596,13 +607,17 @@
     .protagonistas{
         margin: 10px 100px;
     }
-    .protagonistas-año{
+    .background-scroller{
+        height: 85vh;
         display: flex;
-        justify-content: flex-start;
+        align-items: center;
+    }
+    .step_foreground{
+        height: 85vh;
+        display: flex;
         align-items: center;
     }
     .imagen-año{
-        position: absolute;
         max-width: 560px;
     }
     .imagen-año img{
@@ -640,12 +655,16 @@
     .equipo{
         width: 100%;
         height: auto;
+        display: flex;
+        flex-wrap: wrap;
+
     }
     .futbolista{
         background-color: red;
         border-radius: 50%;
         width: 50px;
         height: 50px;
+        margin: 10px;
     }
     .footer{
         display: flex;
