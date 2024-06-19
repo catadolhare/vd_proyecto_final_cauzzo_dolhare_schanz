@@ -256,9 +256,22 @@
             </div>
         </div>
     </div>
+    <div class="analisis">
+        <div class="titulo">
+            <div class="info-titulo">
+                <h2>Cada selección, una catedra de fútbol...</h2>
+                <p>Para comprender cómo cada una de estas selecciones se hizo con la copa debemos conocer las estadísticas detalladas de su desempeño. Analizaremos los partidos jugados por cada jugador, los goles anotados, las posiciones en el campo, las ligas de las que venían y las tarjetas recibidas. Esto nos permitirá desglosar las estrategias de cada DT, revelando cómo cada entrenador maximizó el potencial de sus jugadores. A través de esta comparación, podremos identificar los elementos clave que llevaron a Argentina al éxito en los Mundiales de 1978, 1986 y 2022, destacando las similitudes y diferencias en su camino hacia la gloria.</p>
+            </div>
+            <img src="images/gol.png" alt="">
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>Camila Cauzzo</p>
+        <p>Catalina Dolhare</p>
+        <p>Joaquin Schanz</p>
+    </div>
 </main>
-
-
 
 <!-- Estilos CSS -->
 <style>
@@ -521,5 +534,33 @@
     .info-año img{
         width: 25%;
         height: auto;
+    }
+    .titulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .titulo img{
+        width:12.5%;
+    }
+    .analisis{
+        margin: 10px 100px;
+    }
+    .info-titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #2A1552;
+        height: 10vh;
+    }
+    .footer p{
+        color: white;
+        margin: 0;
     }
 </style>
