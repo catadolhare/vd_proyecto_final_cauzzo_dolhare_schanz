@@ -13,17 +13,27 @@
 
     let jugadores = [];
 
-    const r = 15;
+    const r = 12;
 
-    const xKey = "posicion";
+    const xKey1 = "posicion";
+    const xKey2 = "pais";
     const zKey = "año";
-    const titleKey = "nombre";
+    const titleKey1 = "nombre";
 
-    const coloresAño = ['#2A1552', '#80F6FF', '#FAFF00'];
+    const coloresAño = ['#FAFF00', '#80F6FF', '#2A1552'];
 
-    let xScale = d3.scaleBand()
+    let xScale1 = d3.scaleBand() //Los ordena alfabeticamente, si uso scaleOrdinal se me van a las dos puntas del grafico
         .domain(["Arquero", "Defensor", "Mediocampista", "Delantero"])
         .padding(0.1);
+    
+    let xScale2 = d3.scaleBand()
+        .domain(["Argentina", "España", "Italia", "Francia", "Inglaterra", "Portugal", "Mexico/USA"])
+        .padding(0.1);
+
+    let yScale1 = d3.scaleLinear()
+        .domain([0, 100])
+        .range([500, 0]);
+
 
     /* Variables para el scroller1 */
     let count
@@ -103,7 +113,8 @@
     // Función para actualizar el rango de la escala x
     function updateXScale(width) {
         if (width) {
-        xScale.range([0, width]);
+        xScale1.range([0, width]);
+        xScale2.range([0, width]);
         }
     }
 
@@ -405,19 +416,21 @@
         <div class="grafico">
             <LayerCake
                 padding={{bottom: 15}}
-                x={xKey}
+                x={xKey1}
                 z={zKey}
-                xScale={xScale}
+                xScale={xScale1}
+                yScale={yScale1}
                 zScale={d3.scaleOrdinal()}
                 zRange={coloresAño}
                 data={jugadores}
                 let:width
+                let:height
                 on:update={() => updateXScale(width)}
             >
 
                 <Svg>
                     <AxisX
-                        ticks={xScale.domain()}
+                        ticks={xScale1.domain()}
                         baseline
 
                     />
@@ -426,6 +439,35 @@
                         spacing={5}
                     />
                 </Svg>
+            </LayerCake>
+        </div>
+        <div class="grafico">
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey2}
+                z={zKey}
+                xScale={xScale2}
+                yScale={yScale1}
+                zScale={d3.scaleOrdinal()}
+                zRange={coloresAño}
+                data={jugadores}
+                let:width
+                let:height
+                on:update={() => updateXScale(width)}
+            >
+
+                <Svg>
+                    <AxisX
+                        ticks={xScale2.domain()}
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={5}
+                    />
+                </Svg>
+                
             </LayerCake>
         </div>
     </div>
@@ -440,7 +482,8 @@
 <style>
     .grafico{
         width: 100%;
-        height: 90vh;
+        height: 500px;
+        padding: 10px 100px;
     }
     p{
         font-family: "Quicksand", sans-serif;
