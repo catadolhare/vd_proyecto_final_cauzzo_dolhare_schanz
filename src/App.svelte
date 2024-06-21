@@ -2,6 +2,29 @@
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
     import { onMount } from "svelte";
+    import { scaleOrdinal } from 'd3-scale';
+    import * as d3 from "d3";
+
+    import {LayerCake, Svg} from "layercake";
+
+    import Key from './_components/Key.html.svelte';
+    import AxisX from './_components/AxisX.svelte';
+    import Beeswarm from './_components/Beeswarm.svelte';
+
+    let jugadores = [];
+
+    const r = 15;
+
+    const xKey = "posicion";
+    const zKey = "año";
+    const titleKey = "nombre";
+
+    const coloresAño = ['#2A1552', '#80F6FF', '#FAFF00'];
+
+    let xScale = d3.scaleBand()
+        .domain(["Arquero", "Defensor", "Mediocampista", "Delantero"])
+        .padding(0.1);
+
     /* Variables para el scroller1 */
     let count
     let index
@@ -68,6 +91,20 @@
         isPlayingWakawaka = isPlayingEstateItaliana = isPlayingWeareone = isPlayingLacopavida = false;
         currentAudio = null;
         isPaused = true;
+    }
+
+    onMount(() => {
+    d3.csv("./jugadores.csv", d3.autoType).then(data => {
+        jugadores = data;
+        updateXScale(); // Actualiza la escala después de cargar los datos
+        });
+    });
+
+    // Función para actualizar el rango de la escala x
+    function updateXScale(width) {
+        if (width) {
+        xScale.range([0, width]);
+        }
     }
 
 </script>
@@ -365,7 +402,32 @@
             </div>
             <img src="images/gol.png" alt="">
         </div>
-        
+        <div class="grafico">
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey}
+                z={zKey}
+                xScale={xScale}
+                zScale={d3.scaleOrdinal()}
+                zRange={coloresAño}
+                data={jugadores}
+                let:width
+                on:update={() => updateXScale(width)}
+            >
+
+                <Svg>
+                    <AxisX
+                        ticks={xScale.domain()}
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={5}
+                    />
+                </Svg>
+            </LayerCake>
+        </div>
     </div>
     <div class="footer">
         <p>Camila Cauzzo</p>
@@ -376,11 +438,16 @@
 
 <!-- Estilos CSS -->
 <style>
+    .grafico{
+        width: 100%;
+        height: 90vh;
+    }
     p{
         font-family: "Quicksand", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         color: #2A1552;
+        font-size: 20px;
     }
     h5{
         font-family: "Quicksand", sans-serif;
