@@ -18,22 +18,8 @@
     const xKey1 = "posicion";
     const xKey2 = "pais";
     const zKey = "año";
-    const titleKey1 = "nombre";
 
     const coloresAño = ['#FAFF00', '#80F6FF', '#2A1552'];
-
-    let xScale1 = d3.scaleBand() //Los ordena alfabeticamente, si uso scaleOrdinal se me van a las dos puntas del grafico
-        .domain(["Arquero", "Defensor", "Mediocampista", "Delantero"])
-        .padding(0.1);
-    
-    let xScale2 = d3.scaleBand()
-        .domain(["Argentina", "España", "Italia", "Francia", "Inglaterra", "Portugal", "Mexico/USA"])
-        .padding(0.1);
-
-    let yScale1 = d3.scaleLinear()
-        .domain([0, 100])
-        .range([500, 0]);
-
 
     /* Variables para el scroller1 */
     let count
@@ -106,17 +92,9 @@
     onMount(() => {
     d3.csv("./jugadores.csv", d3.autoType).then(data => {
         jugadores = data;
-        updateXScale(); // Actualiza la escala después de cargar los datos
         });
     });
 
-    // Función para actualizar el rango de la escala x
-    function updateXScale(width) {
-        if (width) {
-        xScale1.range([0, width]);
-        xScale2.range([0, width]);
-        }
-    }
 
 </script>
 <main>
@@ -418,19 +396,15 @@
                 padding={{bottom: 15}}
                 x={xKey1}
                 z={zKey}
-                xScale={xScale1}
-                yScale={yScale1}
+                xScale={d3.scaleBand()}
                 zScale={d3.scaleOrdinal()}
+                xDomain={["Arquero", "Defensor", "Mediocampista", "Delantero"]}
                 zRange={coloresAño}
                 data={jugadores}
-                let:width
-                let:height
-                on:update={() => updateXScale(width)}
             >
 
                 <Svg>
                     <AxisX
-                        ticks={xScale1.domain()}
                         baseline
 
                     />
@@ -446,25 +420,22 @@
                 padding={{bottom: 15}}
                 x={xKey2}
                 z={zKey}
-                xScale={xScale2}
-                yScale={yScale1}
+                xScale={d3.scaleBand()}
                 zScale={d3.scaleOrdinal()}
+                xDomain={["Argentina", "España", "Italia", "Francia", "Inglaterra", "Portugal", "Mexico/USA"]}
                 zRange={coloresAño}
                 data={jugadores}
-                let:width
-                let:height
-                on:update={() => updateXScale(width)}
             >
 
                 <Svg>
                     <AxisX
-                        ticks={xScale2.domain()}
                         baseline
 
                     />
                     <Beeswarm
                         r={r}
-                        spacing={5}
+                        spacing={7}
+                        getTitle={d => `${d["nombre"]}`}
                     />
                 </Svg>
                 
