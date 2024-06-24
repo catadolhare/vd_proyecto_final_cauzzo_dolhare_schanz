@@ -17,6 +17,10 @@
 
     const xKey1 = "posicion";
     const xKey2 = "pais";
+    const xKey3 = "partidos_jugados";
+    const xKey4 = "goles";
+    const xKey5 = "mundiales";
+    const xKey6 = "cantidad_mundiales"
     const zKey = "año";
 
     const coloresAño = ['#FAFF00', '#80F6FF', '#2A1552'];
@@ -391,7 +395,9 @@
             </div>
             <img src="images/gol.png" alt="">
         </div>
+        <h2>Posiciones</h2>
         <div class="grafico">
+            <!--Posicion-->
             <LayerCake
                 padding={{bottom: 15}}
                 x={xKey1}
@@ -411,11 +417,14 @@
                     <Beeswarm
                         r={r}
                         spacing={5}
+                        getTitle={d => `${d["nombre"]}`}
                     />
                 </Svg>
             </LayerCake>
         </div>
+        <h2>Liga en la que juegan</h2>
         <div class="grafico">
+            <!--Liga donde juegan-->
             <LayerCake
                 padding={{bottom: 15}}
                 x={xKey2}
@@ -424,6 +433,112 @@
                 zScale={d3.scaleOrdinal()}
                 xDomain={["Argentina", "España", "Italia", "Francia", "Inglaterra", "Portugal", "Mexico/USA"]}
                 zRange={coloresAño}
+                data={jugadores}
+            >
+
+                <Svg>
+                    <AxisX
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={7}
+                        getTitle={d => `${d["nombre"]}`}
+                    />
+                </Svg>
+                
+            </LayerCake>
+        </div>
+        <h2>Partidos jugados en el mundial</h2>
+        <div class="grafico">
+            <!--Partidos jugados-->
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey3}
+                z={zKey}
+                zRange={coloresAño}
+                zScale={d3.scaleOrdinal()}
+                data={jugadores}
+            >
+
+                <Svg>
+                    <AxisX
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={7}
+                        getTitle={d => `${d["nombre"]}`}
+                    />
+                </Svg>
+                
+            </LayerCake>
+        </div>
+        <h2>Goles anotados en el mundial</h2>
+        <div class="grafico">
+            <!--Goles-->
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey4}
+                z={zKey}
+                zRange={coloresAño}
+                zScale={d3.scaleOrdinal()}
+                data={jugadores}
+            >
+
+                <Svg>
+                    <AxisX
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={7}
+                        getTitle={d => `${d["nombre"]}`}
+                    />
+                </Svg>
+                
+            </LayerCake>
+        </div>
+        <h2>Debut mundialista</h2>
+        <div class="grafico">
+            <!--Debut mundialista-->
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey5}
+                z={zKey}
+                xScale={d3.scaleBand()}
+                zScale={d3.scaleOrdinal()}
+                zRange={coloresAño}
+                xDomain={["Debut mundialista", "Ya jugaron un mundial"]}
+                data={jugadores}
+            >
+
+                <Svg>
+                    <AxisX
+                        baseline
+
+                    />
+                    <Beeswarm
+                        r={r}
+                        spacing={7}
+                        getTitle={d => `${d["nombre"]}`}
+                    />
+                </Svg>
+                
+            </LayerCake>
+        </div>
+        <h2>Cantidad de mundiales jugados</h2>
+        <div class="grafico">
+            <!--Cantidad mundiales-->
+            <LayerCake
+                padding={{bottom: 15}}
+                x={xKey6}
+                z={zKey}
+                zRange={coloresAño}
+                zScale={d3.scaleOrdinal()}
                 data={jugadores}
             >
 
