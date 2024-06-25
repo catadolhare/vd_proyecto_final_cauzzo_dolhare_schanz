@@ -1,7 +1,9 @@
 <!-- Script JS -->
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
+    import * as d3 from "d3";
     import { onMount } from "svelte";
+    let datos=[];
     /* Variables para el scroller1 */
     let count
     let index
@@ -30,11 +32,21 @@
     let bottom3 = 0.9
 
     let showInfo = false;
-
+    let jugadorInfo= false;
+    let selectedJugador = null;
     function toggleInfo() {
         showInfo = !showInfo;
     }
-    let audio;
+    function toggleInfoJ(jugador) {
+        jugadorInfo = !jugadorInfo;
+        // Actualiza selectedJugador solo si se proporciona un jugador
+        if (jugador) {
+            selectedJugador = jugador;
+        } else {
+            selectedJugador = null; // Limpiar selectedJugador si no se proporciona un jugador
+        }
+        
+    }
     let isPlayingWakawaka = false, isPlayingEstateItaliana = false, isPlayingWeareone = false, isPlayingLacopavida = false;
     let audioEstateItaliana, audioWakawaka, audioWeareone, audioLacopavida;
     let currentAudio = null;
@@ -69,6 +81,19 @@
         currentAudio = null;
         isPaused = true;
     }
+    function getImagePath(jugador){
+        return jugador.imagen;
+    }
+    onMount(() => {
+        d3.csv("./datos_generales.csv", d3.autoType).then((data) => {
+            datos = data;
+            console.log(datos);
+            datos.forEach(jugador => {
+                console.log(jugador);
+                getImagePath(jugador);
+            });
+        });
+    });
 
 </script>
 <main>
@@ -264,7 +289,7 @@
         >
             <div slot="background" class="background-scroller">
                 <div class="imagen-año">
-                    <img src="images/1978.png" alt="1978">
+                    <img src="images/1978.png" alt="1978" style="width:800px;">
                 </div>
             </div>
             <div slot="foreground" class="foreground_container">
@@ -275,19 +300,14 @@
                     </div>
                 </section>
                 <section class="step_foreground">
-                    <div class="equipo">
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
-                        <div class="futbolista"></div>
+                    <div class="equipo-container">
+                        {#each datos as jugador}
+                            {#if jugador.anio===1978}
+                                <div class="futbolista">
+                                    <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
+                                </div>
+                            {/if}
+                        {/each}
                     </div>
                 </section>
             </div>
@@ -304,7 +324,7 @@
         >
             <div slot="background" class="background-scroller">
                 <div class="imagen-año">
-                    <img src="images/1986.png" alt="1978">
+                    <img src="images/1986.png" alt="1986" style="width:800px;">
                 </div>
             </div>
             <div slot="foreground" class="foreground_container">
@@ -314,11 +334,19 @@
                         <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
                     </div>
                 </section>
+                
                 <section class="step_foreground">
-                    <div class="equipo">
-                        <div class="futbolista"></div>
+                    <div class="equipo-container">
+                        {#each datos as jugador}
+                            {#if jugador.anio===1986}
+                                <div class="futbolista">
+                                    <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
+                                </div>
+                            {/if}
+                        {/each}
                     </div>
                 </section>
+                
             </div>
         </Scroller>
 
@@ -333,7 +361,7 @@
         >
             <div slot="background" class="background-scroller">
                 <div class="imagen-año">
-                    <img src="images/2022.png" alt="1978">
+                    <img src="images/2022.png" alt="2022" style="width:800px;">
                 </div>
             </div>
             <div slot="foreground" class="foreground_container">
@@ -343,14 +371,42 @@
                         <img src="images/tipito2022.png" alt="">
                     </div>
                 </section>
+                
                 <section class="step_foreground">
-                    <div class="equipo">
-                        <div class="futbolista"></div>
-                    </div>
+                        <div class="equipo-container">
+                                <div class="equipo">
+                                    {#each datos as jugador}
+                                        {#if jugador.anio===2022}
+                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                            </button>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                <div class="info-futbolista">
+                                    {#each datos as jugador}
+                                        {#if selectedJugador === jugador}
+                                            <div class="info">
+                                                {#if selectedJugador.anio===2022}
+                                                    <div class="foto_futbol">
+                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                    </div>
+                                                    <h4>{selectedJugador.nombre}</h4>
+                                                    <p style="color:white;">{selectedJugador.posicion}</p>
+                                                    <p style="color:white;">{selectedJugador.club}</p>
+                                                    
+                                                {/if}
+                                                <button class="close_info" on:click={toggleInfoJ}>
+                                                    <img src="images/cruz_blanca.png" alt="Cerrar">
+                                                </button>
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
+                        </div>
                 </section>
             </div>
         </Scroller>
-
     </div>
     <div class="analisis">
         <div class="titulo">
@@ -404,6 +460,16 @@
         font-variation-settings:
             "wdth" 100;
         font-size: 50px;
+    }
+    h4{
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        font-size: 30px;
+        color: #FAFF00;
     }
     .intro{
         display: flex;
@@ -652,19 +718,49 @@
         justify-content: center;
         align-items: center;
     }
-    .equipo{
+    .equipo-container{
         width: 100%;
-        height: auto;
         display: flex;
         flex-wrap: wrap;
-
+    }
+    .equipo{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
     }
     .futbolista{
-        background-color: red;
+        background-color:#2A1552;
+        display: flex;
+        margin: 5px;
+        overflow: hidden;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        align-content: center;
+        border: none;
+    }
+    .info-futbolista{
+        width: 20%;
+        align-items: center;   
+    }
+    .info{
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: #2A1552;
+        height:80%;
+    }
+    .foto_futbol{
+        width:70%;
+        height: auto;
+        border-radius: 10px;   
+    }
+    .foto_futbol img{
+        width:100px;
+    }
+    .close_info{
+        width:10%;
+        
     }
     .footer{
         display: flex;
