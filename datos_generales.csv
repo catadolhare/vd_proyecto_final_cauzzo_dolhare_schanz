@@ -1,0 +1,74 @@
+nombre,anio,posicion,club,pais_club,partidos_jugados,goles,imagen
+Emiliano Martínez,2022,Arquero,Aston Villa,Inglaterra,7,0,images/2022/emilianomartinez.png
+Gerónimo Rulli,2022,Arquero,Villarreal,España,0,0,images/2022/geronimorulli.png
+Franco Armani,2022,Arquero,River Plate,Argentina,0,0,images/2022/francoarmani.png
+Gonzalo Montiel,2022,Defensor,Sevilla,España,4,0,images/2022/gonzalomontiel.png
+Nicolás Otamendi,2022,Defensor,Benfica,Portugal,7,0,images/2022/nicolasotamendi.png
+Nahuel Molina Lucero,2022,Defensor,Atlético Madrid,España,7,1,images/2022/nahuelmolina.png
+Cristian Romero,2022,Defensor,Tottenham,Inglaterra,7,0,images/2022/cristianromero.png
+Germán Pezzella,2022,Defensor,Betis,España,3,0,images/2022/germanpezzella.png
+Lisandro Martínez,2022,Defensor,Manchester United,Inglaterra,5,0,images/2022/lisandromartinez.png
+Marcos Acuña,2022,Defensor,Sevilla,España,6,0,images/2022/marcosacuna.png
+Nicolás Tagliafico,2022,Defensor,Lyon,Francia,6,0,images/2022/nicolastagliafico.png
+Juan Foyth,2022,Defensor,Villarreal,España,1,0,images/2022/juanfoyth.png
+Leandro Paredes,2022,Mediocampista,Juventus,Italia,5,0,images/2022/leandroparedes.png
+Guido Rodriguez,2022,Mediocampista,Betis,España,1,0,images/2022/guidorodriguez.png
+Rodrigo De Paul,2022,Mediocampista,Atlético Madrid,España,7,0,images/2022/rodrigodepaul.png
+Exequiel Palacios,2022,Mediocampista,Bayer Leverkusen,Alemania,3,0,images/2022/exequielpalacios.png
+Alexis MacAllister,2022,Mediocampista,Brighton,Inglaterra,6,1,images/2022/alexismacallister.png
+Enzo Fernández,2022,Mediocampista,Benfica,Portugal,7,1,images/2022/enzofernandez.png
+Ángel Di María,2022,Mediocampista,Juventus,Italia,5,1,images/2022/angeldimaria.png
+Alejandro Gómez,2022,Mediocampista,Sevilla,España,2,0,images/2022/alejandrogomez.png
+Thiago Almada,2022,Mediocampista,Atlanta United,Estados Unidos,1,0,images/2022/thiagoalmada.png
+Ángel Correa,2022,Delantero,Atlético de Madrid,España,1,0,images/2022/angelcorrea.png
+Julián Álvarez,2022,Delantero,Manchester City,Inglaterra,7,4,images/2022/julianalvarez.png
+Lautaro Martínez,2022,Delantero,Inter,Italia,6,0,images/2022/lautaromartinez.png
+Lionel Messi,2022,Delantero,Paris Saint-Germain,Francia,7,7,images/2022/lionelmessi.png
+Paulo Dybala,2022,Delantero,Roma,Italia,2,0,images/2022/paulodybala.png
+Lionel Scaloni,2022,Entrenador,,,,,images/2022/lionelscaloni.png
+Luis Islas,1986,Arquero,Estudiantes de La Plata ,Argentina,0,0,images/1986/luisislas.png
+Nery Pumpido,1986,Arquero,River Plate ,Argentina,7,0,images/1986/nerypumpido.png
+Héctor Miguel Zelada,1986,Arquero,América,Mexico,0,0,images/1986/hectorzelada.png
+José Luis Brown,1986,Defensor,Dep. Español,Argentina,7,1,images/1986/josebrown.png
+Nestor Clausen,1986,Defensor,Independiente,Argentina,1,0,images/1986/nestorclausen.png
+Daniel Passarella,1986,Defensor,Fiorentina,Italia,0,0,images/1986/danielpassarella.png
+Óscar Ruggeri,1986,Defensor,River Plate,Argentina,7,1,images/1986/oscarruggeri.png
+Oscar Garre,1986,Defensor,Ferro Carril Oeste,Argentina,6,0,images/1986/oscargarre.png
+Julio Olarticoechea,1986,Defensor,Boca Juniors,Argentina,4,0,images/1986/julioolarticoechea.png
+Sergio Batista,1986,Mediocampista,Argentinos,Argentina,7,0,images/1986/sergiobatista.png
+José Cuciuffo,1986,Mediocampista,Vélez Sarsfield,Argentina,7,0,images/1986/josecuciuffo.png
+Claudio Borghi,1986,Mediocampista,Argentinos,Argentina,2,1,images/1986/claudioborghi.png
+Jorge Luís Burruchaga,1986,Mediocampista,Nantes ,Francia,7,2,images/1986/jorgeburruchaga.png
+Héctor Enrique,1986,Mediocampista,River Plate,Argentina,5,0,images/1986/hectorenrique.png
+Ricardo Giusti,1986,Mediocampista,Independiente,Argentina,7,0,images/1986/ricardogiusti.png
+Ricardo Bochini,1986,Mediocampista,Independiente,Argentina,1,0,images/1986/ricardobochini.png
+Carlos Tapia,1986,Mediocampista,Boca Juniors,Argentina,2,1,images/1986/carlostapia.png
+Marcelo Trobbiani,1986,Mediocampista,Elche,España,1,0,images/1986/marcelotrobbiani.png
+Diego Armando Maradona,1986,Mediocampista,Napoli,Italia,7,7,images/1986/diegomaradona.png
+Sergio Omar Almiron,1986,Delantero,Newell's Old Boys,Argentina,0,3,images/1986/sergioalmiron.png
+Pedro Pasculli,1986,Delantero,Lecce,Italia,2,1,images/1986/pedropasculli.png
+Jorge Valdano,1986,Delantero,Real Madrid ,España,7,4,images/1986/jorgevaldano.png
+Carlos Salvador Bilardo,1986,Entrenador,,,,,images/1986/carlosbilardo.png
+Héctor Baley,1978,Arquero,Huracán,Argentina,0,0,images/1978/hectorbaley.png
+Ubaldo Fillol,1978,Arquero,River Plate,Argentina,7,0,images/1978/ubaldofillol.png
+Ricardo La Volpe,1978,Arquero,San Lorenzo,Argentina,0,0,images/1978/ricardolavolpe.png
+Daniel Passarella,1978,Defensa,River Plate,Argentina,7,1,images/1978/danielpassarella.png
+Alberto Tarantini,1978,Defensa,Boca Juniors,Argentina,7,1,images/1978/albertotarantini.png
+Miguel Oviedo,1978,Defensa,Talleres de Córdoba,Argentina,1,0,images/1978/migueloviedo.png
+Luis Galván,1978,Defensa,Talleres de Córdoba,Argentina,7,0,images/1978/luisgalvan.png
+Daniel Killer,1978,Defensa,Racing,Argentina,0,0,images/1978/danielkiller.png
+Jorge Olguin,1978,Defensa,San Lorenzo,Argentina,7,0,images/1978/jorgeolguin.png
+Oscar Rúben Pagnanini,1978,Defensa,Independiente,Argentina,0,0,images/1978/oscarpagnanini.png
+Osvaldo Ardiles,1978,Mediocampista,Huracán,Argentina,6,0,images/1978/osvaldoardiles.png
+Américo Gallego,1978,Mediocampista,Newell's Old Boys,Argentina,7,0,images/1978/americogallego.png
+Rubén Galván,1978,Mediocampista,Independiente,Argentina,0,0,images/1978/rubengalvan.png
+Oscar Ortiz,1978,Mediocampista,River Plate,Argentina,6,0,images/1978/oscarortiz.png
+Jose Daniel Valencia,1978,Mediocampista,Talleres,Argentina,4,0,images/1978/josevalencia.png
+Ricardo Villa,1978,Mediocampista,Racing Club,Argentina,2,0,images/1978/ricardovilla.png
+Norberto Alonso,1978,Mediocampista,River Plate,Argentina,3,0,images/1978/norbertoalonso.png
+Omar Larrosa,1978,Mediocampista,Independiente,Argentina,2,0,images/1978/omarlarrosa.png
+Leopoldo Luque,1978,Delantero,River Plate,Argentina,5,4,images/1978/leopoldoluque.png
+Mario Kempes,1978,Delantero,Valencia CF,España,7,6,images/1978/mariokempes.png
+Daniel Bertoni,1978,Delantero,Sevilla FC,España,6,2,images/1978/danielbertoni.png
+René Houseman,1978,Delantero,Huracán,Argentina,6,1,images/1978/renehouseman.png
+César Luis Menotti,1978,Entrenador,,,,,images/1978/cesarluismenotti.png
