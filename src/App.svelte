@@ -3,15 +3,14 @@
     import Scroller from "@sveltejs/svelte-scroller";
     import * as d3 from "d3";
     import { onMount } from "svelte";
-    let datos=[];
-    import { scaleOrdinal } from 'd3-scale';
-    import * as d3 from "d3";
 
     import {LayerCake, Svg} from "layercake";
 
     import Key from './_components/Key.html.svelte';
     import AxisX from './_components/AxisX.svelte';
     import Beeswarm from './_components/Beeswarm.svelte';
+
+    let datos=[];
 
     let jugadores = [];
 
@@ -53,15 +52,6 @@
     let top3 = 0.1
     let threshold3 = 0.5
     let bottom3 = 0.9
-
-    /* Variables para el scroller 4 */
-    let count4
-    let index4
-    let offset4
-    let progress4
-    let top4 = 0.1
-    let threshold4 = 0.5
-    let bottom4 = 0.9
 
     /* Variables para el scroller 4 */
     let count4
@@ -326,136 +316,139 @@
     </div>
     <div class="protagonistas">
         <h2>Los Protagonistas...</h2>
-        <Scroller
-        top={top}
-        threshold={threshold}
-        bottom={bottom}
-        bind:count={count}
-        bind:index={index}
-        bind:offset={offset}
-        bind:progress={progress}
-        >
-            <div slot="background" class="background-scroller">
-                <div class="imagen-año">
-                    <img src="images/1978.png" alt="1978" style="width:800px;">
+        <div class="protagonistas1978">
+            <Scroller
+            top={top}
+            threshold={threshold}
+            bottom={bottom}
+            bind:count={count}
+            bind:index={index}
+            bind:offset={offset}
+            bind:progress={progress}
+            >
+                <div slot="background" class="background-scroller">
+                    <div class="imagen-año">
+                        <img src="images/1978.png" alt="1978">
+                    </div>
                 </div>
-            </div>
-            <div slot="foreground" class="foreground_container">
-                <section class="step_foreground">
-                    <div class="info-año">
-                        <p>César Luis Menotti convocó a 22 jugadores para el Mundial de 1978, haciendo una selección que combinaba experiencia y juventud. Su predilecto 4-3-3, combinado con el rendimiento del plantel fue la llave con la que Argentina abrió las puertas del campeonato.</p>
-                        <img src="images/tipito1978.png" alt="">
-                    </div>
-                </section>
-                <section class="step_foreground">
-                    <div class="equipo-container">
-                        {#each datos as jugador}
-                            {#if jugador.anio===1978}
-                                <div class="futbolista">
-                                    <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                </div>
-                            {/if}
-                        {/each}
-                    </div>
-                </section>
-            </div>
-        </Scroller>
-
-        <Scroller
-        top={top2}
-        threshold={threshold2}
-        bottom={bottom2}
-        bind:count={count2}
-        bind:index={index2}
-        bind:offset={offset2}
-        bind:progress={progress2}
-        >
-            <div slot="background" class="background-scroller">
-                <div class="imagen-año">
-                    <img src="images/1986.png" alt="1986" style="width:800px;">
-                </div>
-            </div>
-            <div slot="foreground" class="foreground_container">
-                <section class="step_foreground">
-                    <div class="info-año">
-                        <p>Los 22 elegidos de Carlos Salvador Bilardo para el mundial 1986 reflejaron su meticulosa y estratégica visión del fútbol. Apostó por un plantel que combinaba talento, disciplina y una fuerte mentalidad competitiva. Esta selección, aunque inicialmente cuestionada por algunos críticos, demostró ser perfecta para ejecutar su esquema táctico, llevando a Argentina a conquistar su segundo campeonato mundial.</p>
-                        <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
-                    </div>
-                </section>
-                
-                <section class="step_foreground">
-                    <div class="equipo-container">
-                        {#each datos as jugador}
-                            {#if jugador.anio===1986}
-                                <div class="futbolista">
-                                    <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                </div>
-                            {/if}
-                        {/each}
-                    </div>
-                </section>
-                
-            </div>
-        </Scroller>
-
-        <Scroller
-        top={top3}
-        threshold={threshold3}
-        bottom={bottom3}
-        bind:count={count3}
-        bind:index={index3}
-        bind:offset={offset3}
-        bind:progress={progress3}
-        >
-            <div slot="background" class="background-scroller">
-                <div class="imagen-año">
-                    <img src="images/2022.png" alt="2022" style="width:800px;">
-                </div>
-            </div>
-            <div slot="foreground" class="foreground_container">
-                <section class="step_foreground">
-                    <div class="info-año">
-                        <p>La Selección de Scaloni, también llamada "Scaloneta", para el Mundial de 2022 destacó por su diversidad y equilibrio. Lionel Scaloni seleccionó a 26 jugadores, combinando experiencia y juventud. Con un enfoque en la cohesión y el espíritu de equipo, Scaloni logró formar un grupo compacto y versátil.</p>
-                        <img src="images/tipito2022.png" alt="">
-                    </div>
-                </section>
-                
-                <section class="step_foreground">
-                        <div class="equipo-container">
-                                <div class="equipo">
-                                    {#each datos as jugador}
-                                        {#if jugador.anio===2022}
-                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
-                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
-                                            </button>
-                                        {/if}
-                                    {/each}
-                                </div>
-                                <div class="info-futbolista">
-                                    {#each datos as jugador}
-                                        {#if selectedJugador === jugador}
-                                            <div class="info">
-                                                {#if selectedJugador.anio===2022}
-                                                    <div class="foto_futbol">
-                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
-                                                    </div>
-                                                    <h4>{selectedJugador.nombre}</h4>
-                                                    <p style="color:white;">{selectedJugador.posicion}</p>
-                                                    <p style="color:white;">{selectedJugador.club}</p>
-                                                    
-                                                {/if}
-                                                <button class="close_info" on:click={toggleInfoJ}>
-                                                    <img src="images/cruz_blanca.png" alt="Cerrar">
-                                                </button>
-                                            </div>
-                                        {/if}
-                                    {/each}
-                                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground">
+                        <div class="info-año">
+                            <p>César Luis Menotti convocó a 22 jugadores para el Mundial de 1978, haciendo una selección que combinaba experiencia y juventud. Su predilecto 4-3-3, combinado con el rendimiento del plantel fue la llave con la que Argentina abrió las puertas del campeonato.</p>
+                            <img src="images/tipito1978.png" alt="">
                         </div>
-                </section>
-            </div>
-        </Scroller>
-
+                    </section>
+                    <section class="step_foreground">
+                        <div class="equipo-container">
+                            {#each datos as jugador}
+                                {#if jugador.anio===1978}
+                                    <div class="futbolista">
+                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
+                                    </div>
+                                {/if}
+                            {/each}
+                        </div>
+                    </section>
+                </div>
+            </Scroller>
+        </div>
+        <div class="protagonistas1986">
+            <Scroller
+            top={top2}
+            threshold={threshold2}
+            bottom={bottom2}
+            bind:count={count2}
+            bind:index={index2}
+            bind:offset={offset2}
+            bind:progress={progress2}
+            >
+                <div slot="background" class="background-scroller">
+                    <div class="imagen-año">
+                        <img src="images/1986.png" alt="1986">
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground">
+                        <div class="info-año">
+                            <p>Los 22 elegidos de Carlos Salvador Bilardo para el mundial 1986 reflejaron su meticulosa y estratégica visión del fútbol. Apostó por un plantel que combinaba talento, disciplina y una fuerte mentalidad competitiva. Esta selección, aunque inicialmente cuestionada por algunos críticos, demostró ser perfecta para ejecutar su esquema táctico, llevando a Argentina a conquistar su segundo campeonato mundial.</p>
+                            <img src="images/tipito1986.png" alt=""> <!--Esta hay que acomodar posicion-->
+                        </div>
+                    </section>
+                
+                    <section class="step_foreground">
+                        <div class="equipo-container">
+                            {#each datos as jugador}
+                                {#if jugador.anio===1986}
+                                    <div class="futbolista">
+                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
+                                    </div>
+                                {/if}
+                            {/each}
+                        </div>
+                    </section>
+                
+                </div>
+            </Scroller>
+        </div>
+        <div class="protagonistas2022">
+            <Scroller
+                top={top3}
+                threshold={threshold3}
+                bottom={bottom3}
+                bind:count={count3}
+                bind:index={index3}
+                bind:offset={offset3}
+                bind:progress={progress3}
+                >
+                    <div slot="background" class="background-scroller">
+                        <div class="imagen-año">
+                            <img src="images/2022.png" alt="2022">
+                        </div>
+                    </div>
+                    <div slot="foreground" class="foreground_container">
+                        <section class="step_foreground">
+                            <div class="info-año">
+                                <p>La Selección de Scaloni, también llamada "Scaloneta", para el Mundial de 2022 destacó por su diversidad y equilibrio. Lionel Scaloni seleccionó a 26 jugadores, combinando experiencia y juventud. Con un enfoque en la cohesión y el espíritu de equipo, Scaloni logró formar un grupo compacto y versátil.</p>
+                                <img src="images/tipito2022.png" alt="">
+                            </div>
+                        </section>
+                
+                        <section class="step_foreground">
+                                <div class="equipo-container">
+                                        <div class="equipo">
+                                            {#each datos as jugador}
+                                                {#if jugador.anio===2022}
+                                                    <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                                    </button>
+                                                {/if}
+                                            {/each}
+                                        </div>
+                                        <div class="info-futbolista">
+                                            {#each datos as jugador}
+                                                {#if selectedJugador === jugador}
+                                                    <div class="info">
+                                                        {#if selectedJugador.anio===2022}
+                                                            <div class="foto_futbol">
+                                                                <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                            </div>
+                                                            <h4>{selectedJugador.nombre}</h4>
+                                                            <p style="color:white;">{selectedJugador.posicion}</p>
+                                                            <p style="color:white;">{selectedJugador.club}</p>
+                                                    
+                                                        {/if}
+                                                        <button class="close_info" on:click={toggleInfoJ}>
+                                                            <img src="images/cruz_blanca.png" alt="Cerrar">
+                                                        </button>
+                                                    </div>
+                                                {/if}
+                                            {/each}
+                                        </div>
+                                </div>
+                        </section>
+                    </div>
+            </Scroller>
+        </div>
     </div>
     <div class="analisis">
         <div class="titulo">
@@ -467,13 +460,13 @@
         </div>
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Posiciones</h3>
@@ -519,13 +512,13 @@
         </div>
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Liga en la que juegan</h3>
@@ -573,13 +566,13 @@
         </div>
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Partidos jugados en el mundial</h3>
@@ -625,13 +618,13 @@
         </div>
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Goles anotados en el mundial</h3>
@@ -677,13 +670,13 @@
         </div>
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Debut mundialista</h3>
@@ -732,13 +725,13 @@
         
         <div class="grafico-scroller">
             <Scroller
-                top={top}
-                threshold={threshold}
-                bottom={bottom}
-                bind:count={count}
-                bind:index={index}
-                bind:offset={offset}
-                bind:progress={progress}
+                top={top4}
+                threshold={threshold4}
+                bottom={bottom4}
+                bind:count={count4}
+                bind:index={index4}
+                bind:offset={offset4}
+                bind:progress={progress4}
                 >
                     <div slot="background" class="background-scroller">
                         <h3>Cantidad de mundiales jugados</h3>
@@ -832,6 +825,8 @@
         text-align: center;
         font-size: 40px;
         color: #2A1552;
+        font-size: 40px;
+        color: #2A1552;
     }
     h3{
         font-family: "Fredoka", sans-serif;
@@ -840,6 +835,8 @@
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
+        font-size: 30px;
+        text-transform: uppercase;
         font-size: 30px;
         text-transform: uppercase;
     }
