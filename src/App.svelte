@@ -349,15 +349,36 @@
                     </section>
                     <section class="step_foreground">
                         <div class="equipo-container">
-                            {#each datos as jugador}
-                                {#if jugador.anio===1978}
-                                    <div class="futbolista">
-                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                    </div>
-                                {/if}
-                            {/each}
+                                <div class="equipo">
+                                    {#each datos as jugador}
+                                        {#if jugador.anio===1978}
+                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                            </button>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                <div class="info-futbolista">
+                                    {#each datos as jugador}
+                                        {#if selectedJugador === jugador}
+                                            <div class="info">
+                                                {#if selectedJugador.anio===1978}
+                                                    <div class="foto_futbol">
+                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                    </div>
+                                                    <div class="caracteristica_jugador">
+                                                        <h4>{selectedJugador.nombre}</h4>
+                                                        <p style="color:white;">{selectedJugador.posicion}</p>
+                                                        <p style="color:white;">{selectedJugador.club}</p>
+                                                    </div>
+                                                {/if}
+                                                <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
                         </div>
-                    </section>
+                </section>
                 </div>
             </Scroller>
             <div class="paper">
@@ -389,15 +410,36 @@
                 
                     <section class="step_foreground">
                         <div class="equipo-container">
-                            {#each datos as jugador}
-                                {#if jugador.anio===1986}
-                                    <div class="futbolista">
-                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                    </div>
-                                {/if}
-                            {/each}
+                                <div class="equipo">
+                                    {#each datos as jugador}
+                                        {#if jugador.anio===1986}
+                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                            </button>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                <div class="info-futbolista">
+                                    {#each datos as jugador}
+                                        {#if selectedJugador === jugador}
+                                            <div class="info">
+                                                {#if selectedJugador.anio===1986}
+                                                    <div class="foto_futbol">
+                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                    </div>
+                                                    <div class="caracteristica_jugador">
+                                                        <h4>{selectedJugador.nombre}</h4>
+                                                        <p style="color:white;">{selectedJugador.posicion}</p>
+                                                        <p style="color:white;">{selectedJugador.club}</p>
+                                                    </div>
+                                                {/if}
+                                                <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
                         </div>
-                    </section>
+                </section>
                 
                 </div>
             </Scroller>
