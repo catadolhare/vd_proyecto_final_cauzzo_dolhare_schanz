@@ -150,7 +150,7 @@
     </head>
     <div class="intro">
         <div class="portada">
-            <img src="images/PruebaPortada.png" alt="Portada" style="width: 100%; height: auto;">
+            <img src="images/Portada_5.png" alt="Portada" style="width: 100%; height: auto;">
         </div>
         <div class="intro1">
             <p>Una comparativa de las tres seleccionas argentinas que se hicieron con el campeonato del mundo</p>
@@ -429,38 +429,37 @@
                         </section>
                 
                         <section class="step_foreground">
-                                <div class="equipo-container">
-                                        <div class="equipo">
-                                            {#each datos as jugador}
-                                                {#if jugador.anio===2022}
-                                                    <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
-                                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
-                                                    </button>
-                                                {/if}
-                                            {/each}
-                                        </div>
-                                        <div class="info-futbolista">
-                                            {#each datos as jugador}
-                                                {#if selectedJugador === jugador}
-                                                    <div class="info">
-                                                        {#if selectedJugador.anio===2022}
-                                                            <div class="foto_futbol">
-                                                                <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
-                                                            </div>
+                            <div class="equipo-container">
+                                    <div class="equipo">
+                                        {#each datos as jugador}
+                                            {#if jugador.anio===2022}
+                                                <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                    <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                                </button>
+                                            {/if}
+                                        {/each}
+                                    </div>
+                                    <div class="info-futbolista">
+                                        {#each datos as jugador}
+                                            {#if selectedJugador === jugador}
+                                                <div class="info">
+                                                    {#if selectedJugador.anio===2022}
+                                                        <div class="foto_futbol">
+                                                            <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                        </div>
+                                                        <div class="caracteristica_jugador">
                                                             <h4>{selectedJugador.nombre}</h4>
                                                             <p style="color:white;">{selectedJugador.posicion}</p>
                                                             <p style="color:white;">{selectedJugador.club}</p>
-                                                    
-                                                        {/if}
-                                                        <button class="close_info" on:click={toggleInfoJ}>
-                                                            <img src="images/cruz_blanca.png" alt="Cerrar">
-                                                        </button>
-                                                    </div>
-                                                {/if}
-                                            {/each}
-                                        </div>
-                                </div>
-                        </section>
+                                                        </div>
+                                                    {/if}
+                                                    <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
+                                                </div>
+                                            {/if}
+                                        {/each}
+                                    </div>
+                            </div>
+                    </section>
                     </div>
             </Scroller>
             <div class="paper">
@@ -1141,6 +1140,8 @@
     }
     .equipo{
         width: 80%;
+        flex-wrap: wrap;
+        display: flex;
     }
     .futbolista{
         background-color:#2A1552;
@@ -1155,25 +1156,47 @@
     }
     .info-futbolista{
         width: 20%;
-        align-items: center;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .info{
         padding: 5px 10px;
         border-radius: 10px;
         background-color: #2A1552;
-        height:80%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; 
+         
     }
     .foto_futbol{
         width:70%;
-        height: auto;
-        border-radius: 10px;   
+        height:auto;
+        border-radius: 10px;
+        text-align: center;
     }
     .foto_futbol img{
         width:100px;
     }
-    .close_info{
-        width:10%;
-        
+    .caracteristica_jugador{
+        height:auto;
+    }
+    .button_info_futb{
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        align-content: center;
+        border: none;
+        background-color: #2A1552;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button_info_futb img {
+        width: 20px; /* Ajusta el tamaño del icono de la cruz */
+        height: 20px;
     }
     .footer{
         display: flex;
