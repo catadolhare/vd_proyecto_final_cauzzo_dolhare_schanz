@@ -363,9 +363,9 @@
                                                     </div>
                                                     <div class="caracteristica_jugador">
                                                         <h4>{selectedJugador.nombre}</h4>
-                                                        <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
-                                                        <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
-                                                        <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
+                                                        <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
                                                     </div>
                                                 {/if}
                                                 <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -425,9 +425,9 @@
                                                     </div>
                                                     <div class="caracteristica_jugador">
                                                         <h4>{selectedJugador.nombre}</h4>
-                                                        <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
-                                                        <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
-                                                        <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
+                                                        <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
                                                     </div>
                                                 {/if}
                                                 <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -485,12 +485,15 @@
                                                     {#if selectedJugador.anio===2022}
                                                         <div class="foto_futbol">
                                                             <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                            <div class="camiseta">
+                                                                <p>{selectedJugador.numero_camiseta}</p>
+                                                            </div>
                                                         </div>
                                                         <div class="caracteristica_jugador">
                                                             <h4>{selectedJugador.nombre}</h4>
-                                                            <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
-                                                            <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
-                                                            <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
+                                                            <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                            <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                            <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
                                                         </div>
                                                     {/if}
                                                     <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -904,7 +907,7 @@
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
-        font-size: 30px;
+        font-size: 20px;
         color: #FAFF00;
     }
     .intro{
@@ -993,12 +996,6 @@
     .info-mundial img{
         width: 50%;
         height: auto;
-    }
-    .aclaracion{
-        font-style: italic;
-        font-size: 15px;
-        margin: 0;
-        color: white;
     }
     .button {
         padding: 10px 20px;
@@ -1204,7 +1201,7 @@
         padding: 5px 10px;
         border-radius: 10px;
         background-color: #2A1552;
-        height:100%;
+        height:90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1212,16 +1209,37 @@
          
     }
     .foto_futbol{
-        width:80%;
-        height:auto;
+        width: 100%;
+        height: auto;
         border-radius: 10px;
-        text-align: center;
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        align-items: center;
     }
     .foto_futbol img{
-        width:90%;
+        width:75%;
+        height:auto;
+    }
+    .camiseta{
+        width:30px;
+        height:30px;
+        background-color: #FAFF00;
+        border-radius: 50%;
+        display:flex;
+        align-items: center;
+        bottom: 0; 
+        right: 0; 
+        position:absolute;
+    }
+    .camiseta p {
+        margin: 0;
+        font-size: 12px;
+        font-family: "Fredoka", sans-serif;
     }
     .caracteristica_jugador{
-        height:auto;
+        height: auto; /* Ajusta el alto si es necesario */
+        text-align: center;
     }
     .button_info_futb{
         padding: 5px 10px;
@@ -1233,9 +1251,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position:relative;
+        
     }
     .button_info_futb img {
-        width: 20px; /* Ajusta el tamaño del icono de la cruz */
+        width: 20px;
         height: 20px;
     }
     .footer{
