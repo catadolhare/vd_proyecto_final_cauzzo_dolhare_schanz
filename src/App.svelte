@@ -277,10 +277,7 @@
         <h2>El mundo unido por una pasión</h2>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-    
-                <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
-                <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
+                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="329" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -300,16 +297,14 @@
                 <img src="images/foto1986.png" alt="">
             </div>
             <div class="grafico_paises">
-                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                <p class='aclaracion'>*Alemania Occidental puesto numero 2</p>
-                <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
-                <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
+                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="343" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                
             </div>
         </div>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
+                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="314" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -368,8 +363,9 @@
                                                     </div>
                                                     <div class="caracteristica_jugador">
                                                         <h4>{selectedJugador.nombre}</h4>
-                                                        <p style="color:white;">{selectedJugador.posicion}</p>
-                                                        <p style="color:white;">{selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
                                                     </div>
                                                 {/if}
                                                 <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -429,8 +425,9 @@
                                                     </div>
                                                     <div class="caracteristica_jugador">
                                                         <h4>{selectedJugador.nombre}</h4>
-                                                        <p style="color:white;">{selectedJugador.posicion}</p>
-                                                        <p style="color:white;">{selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
                                                     </div>
                                                 {/if}
                                                 <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -491,8 +488,9 @@
                                                         </div>
                                                         <div class="caracteristica_jugador">
                                                             <h4>{selectedJugador.nombre}</h4>
-                                                            <p style="color:white;">{selectedJugador.posicion}</p>
-                                                            <p style="color:white;">{selectedJugador.club}</p>
+                                                            <p style="color:white; font-size:16px;">Posición: {selectedJugador.posicion}</p>
+                                                            <p style="color:white; font-size:16px;">Club: {selectedJugador.club}</p>
+                                                            <p style="color:white; font-size:16px;">País club: {selectedJugador.pais_club}</p>
                                                         </div>
                                                     {/if}
                                                     <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -1214,13 +1212,13 @@
          
     }
     .foto_futbol{
-        width:70%;
+        width:80%;
         height:auto;
         border-radius: 10px;
         text-align: center;
     }
     .foto_futbol img{
-        width:100px;
+        width:90%;
     }
     .caracteristica_jugador{
         height:auto;
