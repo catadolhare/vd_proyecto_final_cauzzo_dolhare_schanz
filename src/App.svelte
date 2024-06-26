@@ -150,7 +150,7 @@
     </head>
     <div class="intro">
         <div class="portada">
-            <img src="images/portada.png" alt="Portada" style="width: 100%; height: auto;">
+            <img src="images/PruebaPortada.png" alt="Portada" style="width: 100%; height: auto;">
         </div>
         <div class="intro1">
             <p>Una comparativa de las tres seleccionas argentinas que se hicieron con el campeonato del mundo</p>
@@ -259,12 +259,18 @@
         </div>
     </div>
     <div class="fondo_intro2">
+        <div class="paper">
+            <img src="images/paper_celeste_abajo.png" alt="paper">
+        </div>
         <div class="intro2">
             <img src="images/copa.png" alt="Copa del mundo" style='height: 450px'>
             <div class="texto">
-                <h2 style='margin:20px 0;'>Más que una competencia</h2>
-                <p style='margin:0 10px;'>La Copa Mundial de la FIFA se ha convertido en el torneo deportivo más aclamado del mundo. Durante años ha sabido atrapar a conocedores y a aficionados, ofreciendo una mezcla única de emoción, pasión y talento. Desde su inicio en 1930, y más allá de las modificaciones que presentó, el Mundial ha sido el escenario de muchos de los momentos más icónicos del fútbol, donde equipos de todas las naciones compiten por la gloria.</p>
+                <h2>Más que una competencia</h2>
+                <p>La Copa Mundial de la FIFA se ha convertido en el torneo deportivo más aclamado del mundo. Durante años ha sabido atrapar a conocedores y a aficionados, ofreciendo una mezcla única de emoción, pasión y talento. Desde su inicio en 1930, y más allá de las modificaciones que presentó, el Mundial ha sido el escenario de muchos de los momentos más icónicos del fútbol, donde equipos de todas las naciones compiten por la gloria.</p>
             </div>
+        </div>
+        <div class="paper">
+            <img src="images/paper_celeste_arriba.png" alt="paper">
         </div>
     </div>
     <div class="mundiales">
@@ -315,6 +321,9 @@
         </div>
     </div>
     <div class="protagonistas">
+        <div class="paper">
+            <img src="images/paper_celeste_abajo.png" alt="paper">
+        </div>
         <h2>Los Protagonistas...</h2>
         <div class="protagonistas1978">
             <Scroller
@@ -351,6 +360,9 @@
                     </section>
                 </div>
             </Scroller>
+            <div class="paper">
+                <img src="images/paper_celeste_arriba.png" alt="paper">
+            </div>
         </div>
         <div class="protagonistas1986">
             <Scroller
@@ -391,6 +403,9 @@
             </Scroller>
         </div>
         <div class="protagonistas2022">
+            <div class="paper">
+                <img src="images/paper_celeste_abajo.png" alt="paper">
+            </div>
             <Scroller
                 top={top3}
                 threshold={threshold3}
@@ -448,6 +463,9 @@
                         </section>
                     </div>
             </Scroller>
+            <div class="paper">
+                <img src="images/paper_celeste_arriba.png" alt="paper">
+            </div>
         </div>
     </div>
     <div class="analisis">
@@ -868,10 +886,17 @@
         padding: 100px 100px;
     }
     .fondo_intro2{
-        background-image: url("images/fondo1.png");
-        background-size: cover;
-        background-position: center;
-        height: 150vh;
+        background-color: #84DFED;
+        width: 100%;
+        height: auto;
+    }
+    .paper{
+        width: 100%;
+        height: auto;
+    }
+    .paper img{
+        width: 100%;
+        height: auto;
     }
     .texto{
         text-align: center;
