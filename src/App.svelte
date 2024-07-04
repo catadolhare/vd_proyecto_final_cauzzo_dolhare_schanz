@@ -278,10 +278,7 @@
         <h2>El mundo unido por una pasión</h2>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-    
-                <p class='aclaracion'>*Alemania Occidental puesto numero 6</p>
-                <p class="aclaracion">**Escocia forma parte del Reino Unido con puesto 11</p>
+                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="329" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -301,16 +298,14 @@
                 <img src="images/foto1986.png" alt="">
             </div>
             <div class="grafico_paises">
-                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                <p class='aclaracion'>*Alemania Occidental puesto numero 2</p>
-                <p class='aclaracion'>**Escocia forma parte del Reino Unido con puesto 19</p>
-                <p class='aclaracion'>***Irlanda del norte con puesto 21</p>
+                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="343" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                
             </div>
         </div>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="294" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                <p class='aclaracion'>*Gales forma parte del Reino Unido con el puesto numero 30</p>
+                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="314" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -350,15 +345,37 @@
                     </section>
                     <section class="step_foreground">
                         <div class="equipo-container">
-                            {#each datos as jugador}
-                                {#if jugador.anio===1978}
-                                    <div class="futbolista">
-                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                    </div>
-                                {/if}
-                            {/each}
+                                <div class="equipo">
+                                    {#each datos as jugador}
+                                        {#if jugador.anio===1978}
+                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                            </button>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                <div class="info-futbolista">
+                                    {#each datos as jugador}
+                                        {#if selectedJugador === jugador}
+                                            <div class="info">
+                                                {#if selectedJugador.anio===1978}
+                                                    <div class="foto_futbol">
+                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                    </div>
+                                                    <div class="caracteristica_jugador">
+                                                        <h4>{selectedJugador.nombre}</h4>
+                                                        <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
+                                                    </div>
+                                                {/if}
+                                                <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
                         </div>
-                    </section>
+                </section>
                 </div>
             </Scroller>
             <div class="paper">
@@ -390,15 +407,37 @@
                 
                     <section class="step_foreground">
                         <div class="equipo-container">
-                            {#each datos as jugador}
-                                {#if jugador.anio===1986}
-                                    <div class="futbolista">
-                                        <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:100px; height:auto;">
-                                    </div>
-                                {/if}
-                            {/each}
+                                <div class="equipo">
+                                    {#each datos as jugador}
+                                        {#if jugador.anio===1986}
+                                            <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <img src={getImagePath(jugador)} alt={jugador.nombre} style="width:75px; height:auto;">
+                                            </button>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                <div class="info-futbolista">
+                                    {#each datos as jugador}
+                                        {#if selectedJugador === jugador}
+                                            <div class="info">
+                                                {#if selectedJugador.anio===1986}
+                                                    <div class="foto_futbol">
+                                                        <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                    </div>
+                                                    <div class="caracteristica_jugador">
+                                                        <h4>{selectedJugador.nombre}</h4>
+                                                        <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                        <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                        <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
+                                                    </div>
+                                                {/if}
+                                                <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
+                                            </div>
+                                        {/if}
+                                    {/each}
+                                </div>
                         </div>
-                    </section>
+                </section>
                 
                 </div>
             </Scroller>
@@ -447,11 +486,15 @@
                                                     {#if selectedJugador.anio===2022}
                                                         <div class="foto_futbol">
                                                             <img src={getImagePath(selectedJugador)} alt={selectedJugador.nombre}>
+                                                            <div class="camiseta">
+                                                                <p>{selectedJugador.numero_camiseta}</p>
+                                                            </div>
                                                         </div>
                                                         <div class="caracteristica_jugador">
                                                             <h4>{selectedJugador.nombre}</h4>
-                                                            <p style="color:white;">{selectedJugador.posicion}</p>
-                                                            <p style="color:white;">{selectedJugador.club}</p>
+                                                            <p style="color:white; font-size:12px;">Posición: {selectedJugador.posicion}</p>
+                                                            <p style="color:white; font-size:12px;">Club: {selectedJugador.club}</p>
+                                                            <p style="color:white; font-size:12px;">País club: {selectedJugador.pais_club}</p>
                                                         </div>
                                                     {/if}
                                                     <button class="button_info_futb" on:click={toggleInfoJ}><img src="images/cruz_blanca.png" alt="cerrar"></button>
@@ -864,7 +907,7 @@
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
-        font-size: 30px;
+        font-size: 20px;
         color: #FAFF00;
     }
     .intro{
@@ -953,12 +996,6 @@
     .info-mundial img{
         width: 50%;
         height: auto;
-    }
-    .aclaracion{
-        font-style: italic;
-        font-size: 15px;
-        margin: 0;
-        color: white;
     }
     .button {
         padding: 10px 20px;
@@ -1164,7 +1201,7 @@
         padding: 5px 10px;
         border-radius: 10px;
         background-color: #2A1552;
-        height:100%;
+        height:90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1172,16 +1209,37 @@
          
     }
     .foto_futbol{
-        width:70%;
-        height:auto;
+        width: 100%;
+        height: auto;
         border-radius: 10px;
-        text-align: center;
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        align-items: center;
     }
     .foto_futbol img{
-        width:100px;
+        width:75%;
+        height:auto;
+    }
+    .camiseta{
+        width:30px;
+        height:30px;
+        background-color: #FAFF00;
+        border-radius: 50%;
+        display:flex;
+        align-items: center;
+        bottom: 0; 
+        right: 0; 
+        position:absolute;
+    }
+    .camiseta p {
+        margin: 0;
+        font-size: 12px;
+        font-family: "Fredoka", sans-serif;
     }
     .caracteristica_jugador{
-        height:auto;
+        height: auto; /* Ajusta el alto si es necesario */
+        text-align: center;
     }
     .button_info_futb{
         padding: 5px 10px;
@@ -1193,9 +1251,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position:relative;
+        
     }
     .button_info_futb img {
-        width: 20px; /* Ajusta el tamaño del icono de la cruz */
+        width: 20px;
         height: 20px;
     }
     .footer{
