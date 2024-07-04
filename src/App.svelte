@@ -16,13 +16,14 @@
 
     const r = 12;
 
-    const xKey1 = "posicion";
+    const xKey1 = "posicion_continuo";
     const xKey2 = "pais";
     const xKey3 = "partidos_jugados";
     const xKey4 = "goles";
     const xKey5 = "mundiales";
     const xKey6 = "cantidad_mundiales"
     const zKey = "año";
+    const titleKey = "nombre"
 
     const coloresAño = ['#FAFF00', '#80F6FF', '#2A1552'];
 
@@ -116,7 +117,7 @@
         return jugador.imagen;
     }
     onMount(() => {
-        d3.csv("./datos_generales.csv", d3.autoType).then((data) => {
+        d3.csv("./jugadores2.csv", d3.autoType).then((data) => {
             datos = data;
             console.log(datos);
             datos.forEach(jugador => {
@@ -127,7 +128,7 @@
     });
 
     onMount(() => {
-    d3.csv("./jugadores.csv", d3.autoType).then(data => {
+    d3.csv("./jugadores2.csv", d3.autoType).then(data => {
         jugadores = data;
         });
     });
@@ -493,9 +494,8 @@
                                 padding={{bottom: 15}}
                                 x={xKey1}
                                 z={zKey}
-                                xScale={d3.scaleBand()}
+                                xScale={d3.scaleLinear()}
                                 zScale={d3.scaleOrdinal()}
-                                xDomain={["Arquero", "Defensor", "Mediocampista", "Delantero"]}
                                 zRange={coloresAño}
                                 data={jugadores}
                             >
@@ -507,7 +507,6 @@
                                     <Beeswarm
                                         r={r}
                                         spacing={5}
-                                        getTitle={d => `${d["nombre"]}`}
                                     />
                                 </Svg>
                             </LayerCake>
@@ -527,6 +526,7 @@
                     </div>
             </Scroller>
         </div>
+        <!--
         <div class="grafico-scroller">
             <Scroller
                 top={top4}
@@ -540,7 +540,7 @@
                     <div slot="background" class="background-scroller">
                         <h3>Liga en la que juegan</h3>
                         <div class="grafico">
-                            <!--Liga donde juegan-->
+                            <Liga donde juegan
                             <LayerCake
                                 padding={{bottom: 15}}
                                 x={xKey2}
@@ -594,7 +594,7 @@
                     <div slot="background" class="background-scroller">
                         <h3>Partidos jugados en el mundial</h3>
                         <div class="grafico">
-                            <!--Partidos jugados-->
+                            Partidos jugados
                             <LayerCake
                                 padding={{bottom: 15}}
                                 x={xKey3}
@@ -646,7 +646,7 @@
                     <div slot="background" class="background-scroller">
                         <h3>Goles anotados en el mundial</h3>
                         <div class="grafico">
-                            <!--Goles-->
+                            Goles
                             <LayerCake
                                 padding={{bottom: 15}}
                                 x={xKey4}
@@ -698,7 +698,7 @@
                     <div slot="background" class="background-scroller">
                         <h3>Debut mundialista</h3>
                         <div class="grafico">
-                            <!--Debut mundialista-->
+                            Debut mundialista
                             <LayerCake
                                 padding={{bottom: 15}}
                                 x={xKey5}
@@ -753,7 +753,7 @@
                     <div slot="background" class="background-scroller">
                         <h3>Cantidad de mundiales jugados</h3>
                         <div class="grafico">
-                            <!--Cantidad mundiales-->
+                            <Cantidad mundiales
                             <LayerCake
                                 padding={{bottom: 15}}
                                 x={xKey6}
@@ -791,7 +791,7 @@
                         </section>
                     </div>
             </Scroller>
-        </div>
+        </div>-->
     </div>
     <div class="footer">
         <p>Camila Cauzzo</p>
