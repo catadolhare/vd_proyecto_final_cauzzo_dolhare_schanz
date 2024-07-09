@@ -85,30 +85,30 @@
     let isPaused = true;
 
     function playAudio(audioElement, setIsPlaying) {
-    // Pausa el audio actual si es diferente del nuevo audio
-    if (currentAudio && currentAudio !== audioElement) {
-        currentAudio.pause();
-        // Resetea el estado de reproducción de todas las canciones
-        isPlayingWakawaka = false;
-        isPlayingEstateItaliana = false;
-        isPlayingWeareone = false;
-        isPlayingLacopavida = false;
-    }
-
-    // Controla la reproducción del nuevo audio
-    if (audioElement.paused) {
-        audioElement.play();
-        setIsPlaying(true);
-        currentAudio = audioElement;
-        isPaused = false;
-    } else {
-        audioElement.pause();
-        setIsPlaying(false);
-        if (currentAudio === audioElement) {
-            isPaused = true;
+        // Pausa el audio actual si es diferente del nuevo audio
+        if (currentAudio && currentAudio !== audioElement) {
+            currentAudio.pause();
+            // Resetea el estado de reproducción de todas las canciones
+            isPlayingWakawaka = false;
+            isPlayingEstateItaliana = false;
+            isPlayingWeareone = false;
+            isPlayingLacopavida = false;
         }
-    }
-    showFloatingControl = true;
+
+        // Controla la reproducción del nuevo audio
+        if (audioElement.paused) {
+            audioElement.play();
+            setIsPlaying(true);
+            currentAudio = audioElement;
+            isPaused = false;
+        } else {
+            audioElement.pause();
+            setIsPlaying(false);
+            if (currentAudio === audioElement) {
+                isPaused = true;
+            }
+        }
+        showFloatingControl = true;
     }
     
     
@@ -171,7 +171,7 @@
                             </div>
                             <div class="cancion-artista">
                                 <h2>Waka Waka</h2>
-                                <p>Shakira</p>
+                                <p style='font-size: 15px'>Shakira</p>
                             </div>
                             <div class="boton_cancion">
                                 <button class="button_canciones" on:click={() => playAudio(audioWakawaka, (playing) => { isPlayingWakawaka = playing })}>
@@ -189,7 +189,7 @@
                             </div>
                             <div class="cancion-artista">
                                 <h2>Un'Estate Italiana</h2>
-                                <p>Gianna Nannini & Edoardo Bennato</p>
+                                <p style='font-size: 15px'>Gianna Nannini & Edoardo Bennato</p>
                             </div>
                             <div class="boton_cancion">
                                 <button class="button_canciones" on:click={() => playAudio(audioEstateItaliana, (playing) => { isPlayingEstateItaliana = playing})}>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="cancion-artista">
                                 <h2>We are one</h2>
-                                <p>Pitbull, Jennifer Lopez & Claudia Leitte</p>
+                                <p style='font-size: 15px'>Pitbull, Jennifer Lopez & Claudia Leitte</p>
                             </div>
                             <div class="boton_cancion">
                                 <button class="button_canciones" on:click={() => playAudio(audioWeareone, (playing) => { isPlayingWeareone = playing})}>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="cancion-artista">
                                 <h2>La copa de la vida</h2>
-                                <p>Ricky Martin</p>
+                                <p style='font-size: 15px'>Ricky Martin</p>
                             </div>
                             <div class="boton_cancion">
                                 <button class="button_canciones" on:click={() => playAudio(audioLacopavida, (playing) => { isPlayingLacopavida = playing})}>
@@ -344,6 +344,7 @@
                     </section>
                     <section class="step_foreground">
                         <div class="equipo-container">
+                            <h3>Hace click para conocer más</h3>
                                 <div class="equipo">
                                     {#each datos as jugador}
                                         {#if jugador.anio===1978}
@@ -418,6 +419,7 @@
                 
                     <section class="step_foreground">
                         <div class="equipo-container">
+                            <h3>Hace click para conocer más</h3>
                                 <div class="equipo">
                                     {#each datos as jugador}
                                         {#if jugador.anio===1986}
@@ -492,6 +494,7 @@
                         </section>
                         <section class="step_foreground">
                             <div class="equipo-container">
+                                <h3>Hace click para conocer más</h3>
                                 <div class="equipo">
                                     {#each datos as jugador}
                                         {#if jugador.anio===2022}
@@ -1183,6 +1186,9 @@
         align-items: center;
         position: relative;
     }
+    .info-año p{
+        margin-left: 10px;
+    }
     .info-año img{
         width: 25%;
         height: auto;
@@ -1206,12 +1212,18 @@
     }
     .equipo-container{
         width: 100%;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-wrap: wrap;
     }
+    .equipo-container h3{
+        position: relative;
+        top: 100px;
+    }
     .equipo{
         width: 80%;
-        margin: 70px 0px; /*Tiene que haber una mejor manera de solucionar la disposicion de los circulitos*/
+        margin: 100px 0px; /*Tiene que haber una mejor manera de solucionar la disposicion de los circulitos*/
         flex-wrap: wrap;
         display: flex;
     }
