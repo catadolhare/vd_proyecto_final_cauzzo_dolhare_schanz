@@ -1,0 +1,352 @@
+[
+    {
+        "año": 2022,
+        "nombre": "Emiliano Martínez",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Gerónimo Rulli",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Franco Armani",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Gonzalo Montiel",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Nicolás Otamendi",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Nahuel Molina Lucero",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Cristian Romero",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Germán Pezzella",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Lisandro Martínez",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Marcos Acuña",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Nicolás Tagliafico",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Juan Foyth",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 2022,
+        "nombre": "Leandro Paredes",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Guido Rodriguez",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Rodrigo De Paul",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Exequiel Palacios",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Alexis MacAllister",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Enzo Fernández",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Ángel Di María",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Alejandro Gómez",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Thiago Almada",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 2022,
+        "nombre": "Ángel Correa",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Julián Álvarez",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Lautaro Martínez",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Lionel Messi",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 2022,
+        "nombre": "Paulo Dybala",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1986,
+        "nombre": "Luis Islas",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1986,
+        "nombre": "Nery Pumpido",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1986,
+        "nombre": "Héctor Miguel Zelada",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1986,
+        "nombre": "José Luis Brown",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Nestor Clausen",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Daniel Passarella",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Óscar Ruggeri",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Oscar Garre",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Julio Olarticoechea",
+        "posicion": "Defensor"
+    },
+    {
+        "año": 1986,
+        "nombre": "Sergio Batista",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "José Cuciuffo",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Claudio Borghi",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Jorge Luís Burruchaga",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Héctor Enrique",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Ricardo Giusti",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Ricardo Bochini",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Carlos Tapia",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Marcelo Trobbiani",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Diego Armando Maradona",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1986,
+        "nombre": "Sergio Omar Almiron",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1986,
+        "nombre": "Pedro Pasculli",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1986,
+        "nombre": "Jorge Valdano",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Héctor Baley",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Ubaldo Fillol",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Ricardo La Volpe",
+        "posicion": "Arquero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Daniel Passarella",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Alberto Tarantini",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Miguel Oviedo",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Luis Galván",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Daniel Killer",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Jorge Olguin",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Oscar Rúben Pagnanini",
+        "posicion": "Defensa"
+    },
+    {
+        "año": 1978,
+        "nombre": "Osvaldo Ardiles",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Américo Gallego",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Rubén Galván",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Oscar Ortiz",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Jose Daniel Valencia",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Ricardo Villa",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Norberto Alonso",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Omar Larrosa",
+        "posicion": "Mediocampista"
+    },
+    {
+        "año": 1978,
+        "nombre": "Leopoldo Luque",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Mario Kempes",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1978,
+        "nombre": "Daniel Bertoni",
+        "posicion": "Delantero"
+    },
+    {
+        "año": 1978,
+        "nombre": "René Houseman",
+        "posicion": "Delantero"
+    }
+]

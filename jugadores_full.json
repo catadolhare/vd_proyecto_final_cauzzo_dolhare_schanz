@@ -1,6 +1,6 @@
 [
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Emiliano Martínez",
         "posicion": "Arquero",
         "club": "Aston Villa",
@@ -9,10 +9,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/emilianomartinez.png"
+        "imagen": "images/2022/emilianomartinez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Gerónimo Rulli",
         "posicion": "Arquero",
         "club": "Villarreal",
@@ -21,10 +22,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/geronimorulli.png"
+        "imagen": "images/2022/geronimorulli.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Franco Armani",
         "posicion": "Arquero",
         "club": "River Plate",
@@ -33,10 +35,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
-        "imagen": "images/2022/francoarmani.png"
+        "imagen": "images/2022/francoarmani.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Gonzalo Montiel",
         "posicion": "Defensor",
         "club": "Sevilla",
@@ -45,10 +48,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/gonzalomontiel.png"
+        "imagen": "images/2022/gonzalomontiel.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Nicolás Otamendi",
         "posicion": "Defensor",
         "club": "Benfica",
@@ -57,10 +61,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/2022/nicolasotamendi.png"
+        "imagen": "images/2022/nicolasotamendi.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Nahuel Molina Lucero",
         "posicion": "Defensor",
         "club": "Atlético Madrid",
@@ -69,10 +74,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/nahuelmolina.png"
+        "imagen": "images/2022/nahuelmolina.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Cristian Romero",
         "posicion": "Defensor",
         "club": "Tottenham",
@@ -81,10 +87,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/cristianromero.png"
+        "imagen": "images/2022/cristianromero.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Germán Pezzella",
         "posicion": "Defensor",
         "club": "Betis",
@@ -93,10 +100,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/germanpezzella.png"
+        "imagen": "images/2022/germanpezzella.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Lisandro Martínez",
         "posicion": "Defensor",
         "club": "Manchester United",
@@ -105,10 +113,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/lisandromartinez.png"
+        "imagen": "images/2022/lisandromartinez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Marcos Acuña",
         "posicion": "Defensor",
         "club": "Sevilla",
@@ -117,10 +126,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
-        "imagen": "images/2022/marcosacuna.png"
+        "imagen": "images/2022/marcosacuna.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Nicolás Tagliafico",
         "posicion": "Defensor",
         "club": "Lyon",
@@ -129,10 +139,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
-        "imagen": "images/2022/nicolastagliafico.png"
+        "imagen": "images/2022/nicolastagliafico.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Juan Foyth",
         "posicion": "Defensor",
         "club": "Villarreal",
@@ -141,10 +152,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/juanfoyth.png"
+        "imagen": "images/2022/juanfoyth.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Leandro Paredes",
         "posicion": "Mediocampista",
         "club": "Juventus",
@@ -153,10 +165,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/leandroparedes.png"
+        "imagen": "images/2022/leandroparedes.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Guido Rodriguez",
         "posicion": "Mediocampista",
         "club": "Betis",
@@ -165,10 +178,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/guidorodriguez.png"
+        "imagen": "images/2022/guidorodriguez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Rodrigo De Paul",
         "posicion": "Mediocampista",
         "club": "Atlético Madrid",
@@ -177,10 +191,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/rodrigodepaul.png"
+        "imagen": "images/2022/rodrigodepaul.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Exequiel Palacios",
         "posicion": "Mediocampista",
         "club": "Bayer Leverkusen",
@@ -189,10 +204,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/exequielpalacios.png"
+        "imagen": "images/2022/exequielpalacios.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Alexis MacAllister",
         "posicion": "Mediocampista",
         "club": "Brighton",
@@ -201,10 +217,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/alexismacallister.png"
+        "imagen": "images/2022/alexismacallister.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Enzo Fernández",
         "posicion": "Mediocampista",
         "club": "Benfica",
@@ -213,10 +230,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/enzofernandez.png"
+        "imagen": "images/2022/enzofernandez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Ángel Di María",
         "posicion": "Mediocampista",
         "club": "Juventus",
@@ -225,10 +243,11 @@
         "goles": 1,
         "debut_mundialista": "no",
         "cantidad_mundiales": 4,
-        "imagen": "images/2022/angeldimaria.png"
+        "imagen": "images/2022/angeldimaria.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Alejandro Gómez",
         "posicion": "Mediocampista",
         "club": "Sevilla",
@@ -237,10 +256,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/alejandrogomez.png"
+        "imagen": "images/2022/alejandrogomez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Thiago Almada",
         "posicion": "Mediocampista",
         "club": "Atlanta United",
@@ -249,10 +269,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/thiagoalmada.png"
+        "imagen": "images/2022/thiagoalmada.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Ángel Correa",
         "posicion": "Delantero",
         "club": "Atlético de Madrid",
@@ -261,10 +282,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/angelcorrea.png"
+        "imagen": "images/2022/angelcorrea.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Julián Álvarez",
         "posicion": "Delantero",
         "club": "Manchester City",
@@ -273,10 +295,11 @@
         "goles": 4,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/julianalvarez.png"
+        "imagen": "images/2022/julianalvarez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Lautaro Martínez",
         "posicion": "Delantero",
         "club": "Inter",
@@ -285,10 +308,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/2022/lautaromartinez.png"
+        "imagen": "images/2022/lautaromartinez.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Lionel Messi",
         "posicion": "Delantero",
         "club": "Paris Saint-Germain",
@@ -297,10 +321,11 @@
         "goles": 7,
         "debut_mundialista": "no",
         "cantidad_mundiales": 5,
-        "imagen": "images/2022/lionelmessi.png"
+        "imagen": "images/2022/lionelmessi.png",
+        "value": 0.5
     },
     {
-        "año": 2022,
+        "anio": 2022,
         "nombre": "Paulo Dybala",
         "posicion": "Delantero",
         "club": "Roma",
@@ -309,10 +334,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
-        "imagen": "images/2022/paulodybala.png"
+        "imagen": "images/2022/paulodybala.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Luis Islas",
         "posicion": "Arquero",
         "club": "Estudiantes de La Plata ",
@@ -321,10 +347,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1986/luisislas.png"
+        "imagen": "images/1986/luisislas.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Nery Pumpido",
         "posicion": "Arquero",
         "club": "River Plate ",
@@ -333,10 +360,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/1986/nerypumpido.png"
+        "imagen": "images/1986/nerypumpido.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Héctor Miguel Zelada",
         "posicion": "Arquero",
         "club": "América",
@@ -345,22 +373,24 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/hectorzelada.png"
+        "imagen": "images/1986/hectorzelada.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "José Luis Brown",
         "posicion": "Defensor",
-        "club": "Dep. Español",
+        "club": "Dep. Espaniol",
         "pais": "Argentina",
         "partidos_jugados": 7,
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/josebrown.png"
+        "imagen": "images/1986/josebrown.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Nestor Clausen",
         "posicion": "Defensor",
         "club": "Independiente",
@@ -369,10 +399,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/nestorclausen.png"
+        "imagen": "images/1986/nestorclausen.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Daniel Passarella",
         "posicion": "Defensor",
         "club": "Fiorentina",
@@ -381,10 +412,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/1986/danielpassarella.png"
+        "imagen": "images/1986/danielpassarella.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Óscar Ruggeri",
         "posicion": "Defensor",
         "club": "River Plate",
@@ -393,10 +425,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 3,
-        "imagen": "images/1986/oscarruggeri.png"
+        "imagen": "images/1986/oscarruggeri.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Oscar Garre",
         "posicion": "Defensor",
         "club": "Ferro Carril Oeste",
@@ -405,10 +438,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/oscargarre.png"
+        "imagen": "images/1986/oscargarre.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Julio Olarticoechea",
         "posicion": "Defensor",
         "club": "Boca Juniors",
@@ -417,10 +451,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/1986/julioolarticoechea.png"
+        "imagen": "images/1986/julioolarticoechea.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Sergio Batista",
         "posicion": "Mediocampista",
         "club": "Argentinos",
@@ -429,10 +464,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1986/sergiobatista.png"
+        "imagen": "images/1986/sergiobatista.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "José Cuciuffo",
         "posicion": "Mediocampista",
         "club": "Vélez Sarsfield",
@@ -441,10 +477,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/josecuciuffo.png"
+        "imagen": "images/1986/josecuciuffo.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Claudio Borghi",
         "posicion": "Mediocampista",
         "club": "Argentinos",
@@ -453,10 +490,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/claudioborghi.png"
+        "imagen": "images/1986/claudioborghi.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Jorge Luís Burruchaga",
         "posicion": "Mediocampista",
         "club": "Nantes ",
@@ -465,10 +503,11 @@
         "goles": 2,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1986/jorgeburruchaga.png"
+        "imagen": "images/1986/jorgeburruchaga.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Héctor Enrique",
         "posicion": "Mediocampista",
         "club": "River Plate",
@@ -477,10 +516,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/hectorenrique.png"
+        "imagen": "images/1986/hectorenrique.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Ricardo Giusti",
         "posicion": "Mediocampista",
         "club": "Independiente",
@@ -489,10 +529,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1986/ricardogiusti.png"
+        "imagen": "images/1986/ricardogiusti.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Ricardo Bochini",
         "posicion": "Mediocampista",
         "club": "Independiente",
@@ -501,10 +542,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/ricardobochini.png"
+        "imagen": "images/1986/ricardobochini.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Carlos Tapia",
         "posicion": "Mediocampista",
         "club": "Boca Juniors",
@@ -513,10 +555,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/carlostapia.png"
+        "imagen": "images/1986/carlostapia.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Marcelo Trobbiani",
         "posicion": "Mediocampista",
         "club": "Elche",
@@ -525,10 +568,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/marcelotrobbiani.png"
+        "imagen": "images/1986/marcelotrobbiani.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Diego Armando Maradona",
         "posicion": "Mediocampista",
         "club": "Napoli",
@@ -537,10 +581,11 @@
         "goles": 7,
         "debut_mundialista": "no",
         "cantidad_mundiales": 4,
-        "imagen": "images/1986/diegomaradona.png"
+        "imagen": "images/1986/diegomaradona.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Sergio Omar Almiron",
         "posicion": "Delantero",
         "club": "Newell's Old Boys",
@@ -549,10 +594,11 @@
         "goles": 3,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/sergioalmiron.png"
+        "imagen": "images/1986/sergioalmiron.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Pedro Pasculli",
         "posicion": "Delantero",
         "club": "Lecce",
@@ -561,10 +607,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1986/pedropasculli.png"
+        "imagen": "images/1986/pedropasculli.png",
+        "value": 0.5
     },
     {
-        "año": 1986,
+        "anio": 1986,
         "nombre": "Jorge Valdano",
         "posicion": "Delantero",
         "club": "Real Madrid ",
@@ -573,10 +620,11 @@
         "goles": 4,
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
-        "imagen": "images/1986/jorgevaldano.png"
+        "imagen": "images/1986/jorgevaldano.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Héctor Baley",
         "posicion": "Arquero",
         "club": "Huracán",
@@ -585,10 +633,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/hectorbaley.png"
+        "imagen": "images/1978/hectorbaley.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Ubaldo Fillol",
         "posicion": "Arquero",
         "club": "River Plate",
@@ -597,10 +646,11 @@
         "goles": 0,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/1978/ubaldofillol.png"
+        "imagen": "images/1978/ubaldofillol.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Ricardo La Volpe",
         "posicion": "Arquero",
         "club": "San Lorenzo",
@@ -609,10 +659,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/ricardolavolpe.png"
+        "imagen": "images/1978/ricardolavolpe.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Daniel Passarella",
         "posicion": "Defensa",
         "club": "River Plate",
@@ -621,10 +672,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 3,
-        "imagen": "images/1978/danielpassarella.png"
+        "imagen": "images/1978/danielpassarella.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Alberto Tarantini",
         "posicion": "Defensa",
         "club": "Boca Juniors",
@@ -633,10 +685,11 @@
         "goles": 1,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/albertotarantini.png"
+        "imagen": "images/1978/albertotarantini.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Miguel Oviedo",
         "posicion": "Defensa",
         "club": "Talleres de Córdoba",
@@ -645,10 +698,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/migueloviedo.png"
+        "imagen": "images/1978/migueloviedo.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Luis Galván",
         "posicion": "Defensa",
         "club": "Talleres de Córdoba",
@@ -657,10 +711,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/luisgalvan.png"
+        "imagen": "images/1978/luisgalvan.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Daniel Killer",
         "posicion": "Defensa",
         "club": "Racing",
@@ -669,10 +724,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/danielkiller.png"
+        "imagen": "images/1978/danielkiller.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Jorge Olguin",
         "posicion": "Defensa",
         "club": "San Lorenzo",
@@ -681,10 +737,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/jorgeolguin.png"
+        "imagen": "images/1978/jorgeolguin.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Oscar Rúben Pagnanini",
         "posicion": "Defensa",
         "club": "Independiente",
@@ -693,10 +750,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/oscarpagnanini.png"
+        "imagen": "images/1978/oscarpagnanini.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Osvaldo Ardiles",
         "posicion": "Mediocampista",
         "club": "Huracán",
@@ -705,10 +763,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/osvaldoardiles.png"
+        "imagen": "images/1978/osvaldoardiles.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Américo Gallego",
         "posicion": "Mediocampista",
         "club": "Newell's Old Boys",
@@ -717,11 +776,12 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/americogallego.png"
+        "imagen": "images/1978/americogallego.png",
+        "value": 0.5
         
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Rubén Galván",
         "posicion": "Mediocampista",
         "club": "Independiente",
@@ -730,10 +790,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/rubengalvan.png"
+        "imagen": "images/1978/rubengalvan.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Oscar Ortiz",
         "posicion": "Mediocampista",
         "club": "River Plate",
@@ -742,10 +803,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/oscarortiz.png"
+        "imagen": "images/1978/oscarortiz.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Jose Daniel Valencia",
         "posicion": "Mediocampista",
         "club": "Talleres",
@@ -754,10 +816,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/josevalencia.png"
+        "imagen": "images/1978/josevalencia.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Ricardo Villa",
         "posicion": "Mediocampista",
         "club": "Racing Club",
@@ -766,10 +829,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/ricardovilla.png"
+        "imagen": "images/1978/ricardovilla.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Norberto Alonso",
         "posicion": "Mediocampista",
         "club": "River Plate",
@@ -778,10 +842,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/norbertoalonso.png"
+        "imagen": "images/1978/norbertoalonso.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Omar Larrosa",
         "posicion": "Mediocampista",
         "club": "Independiente",
@@ -790,10 +855,11 @@
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/omarlarrosa.png"
+        "imagen": "images/1978/omarlarrosa.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Leopoldo Luque",
         "posicion": "Delantero",
         "club": "River Plate",
@@ -802,10 +868,11 @@
         "goles": 4,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/leopoldoluque.png"
+        "imagen": "images/1978/leopoldoluque.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Mario Kempes",
         "posicion": "Delantero",
         "club": "Valencia CF",
@@ -814,10 +881,11 @@
         "goles": 6,
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
-        "imagen": "images/1978/mariokempes.png"
+        "imagen": "images/1978/mariokempes.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "Daniel Bertoni",
         "posicion": "Delantero",
         "club": "Sevilla FC",
@@ -826,10 +894,11 @@
         "goles": 2,
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
-        "imagen": "images/1978/danielbertoni.png"
+        "imagen": "images/1978/danielbertoni.png",
+        "value": 0.5
     },
     {
-        "año": 1978,
+        "anio": 1978,
         "nombre": "René Houseman",
         "posicion": "Delantero",
         "club": "Huracán",
@@ -838,6 +907,7 @@
         "goles": 1,
         "debut_mundialista": "no",
         "cantidad_mundiales": 1,
-        "imagen": "images/1978/renehouseman.png"
+        "imagen": "images/1978/renehouseman.png",
+        "value": 0.5
     }
 ]

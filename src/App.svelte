@@ -27,6 +27,7 @@
         {anio: 1978, nombre: "Américo Gallego", posicion: "Mediocampista", value: 10},
         {anio: 1978, nombre: "Mario Kempes", posicion: "Delantero", value: 10}
     ];
+    let jugadores_full=[];
 
     const xKey = "posicion";
     const rKey = "value";
@@ -137,6 +138,21 @@
                 getImagePath(jugador);
             });
         });
+        fetch('./jugadores_full.json')
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    console.error('Error al cargar el archivo JSON:', response.statusText);
+                }
+            })
+            .then(datas => {
+                jugadores_full = datas;
+                console.log(jugadores_full);
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
     });
 
 </script>
@@ -562,7 +578,7 @@
         <div class="grafico">            
             <div class="chart-container">
                 <LayerCake
-                    data={jugadores_test}
+                    data={jugadores_full}
                     x={xKey}
                     r={rKey}
                     z={zKey}
