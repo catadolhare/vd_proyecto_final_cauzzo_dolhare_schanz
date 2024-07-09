@@ -4,27 +4,40 @@
     import * as d3 from "d3";
     import { onMount } from "svelte";
 
-    import {LayerCake, Svg} from "layercake";
+    import {Html, LayerCake, Svg} from "layercake";
+    import Tooltip from './_components/Tooltip.html.svelte';
 
     import Key from './_components/Key.html.svelte';
     import AxisX from './_components/AxisX.svelte';
-    import Beeswarm from './_components/Beeswarm.svelte';
+    import ForceLayout from './_components/CirclePackForce.svelte';
 
     let datos=[];
 
-    let jugadores = [];
+    let jugadores_test = [
+        {anio: 2022, nombre: "Emiliano Martínez", posicion: "Arquero", value: 10},
+        {anio: 2022, nombre: "Nicolás Otamendi", posicion: "Defensor", value: 10},
+        {anio: 2022, nombre: "Ángel Di María", posicion: "Mediocampista", value: 10},
+        {anio: 2022, nombre: "Lionel Messi", posicion: "Delantero", value: 10},
+        {anio: 1986, nombre: "Nery Pumpido", posicion: "Arquero", value: 10},
+        {anio: 1986, nombre: "Óscar Ruggeri", posicion: "Defensor", value: 10},
+        {anio: 1986, nombre: "Sergio Batista", posicion: "Mediocampista", value: 10},
+        {anio: 1986, nombre: "Diego Armando Maradona", posicion: "Delantero", value: 10},
+        {anio: 1978, nombre: "Ubaldo Fillol", posicion: "Arquero", value: 10},
+        {anio: 1978, nombre: "Miguel Oviedo", posicion: "Defensor", value: 10},
+        {anio: 1978, nombre: "Américo Gallego", posicion: "Mediocampista", value: 10},
+        {anio: 1978, nombre: "Mario Kempes", posicion: "Delantero", value: 10}
+    ];
 
-    const r = 12;
+    const xKey = "posicion";
+    const rKey = "value";
+    const zKey = "anio"
 
-    const xKey1 = "posicion";
-    const xKey2 = "pais";
-    const xKey3 = "partidos_jugados";
-    const xKey4 = "goles";
-    const xKey5 = "mundiales";
-    const xKey6 = "cantidad_mundiales"
-    const zKey = "año";
+    let groupBy = true;
 
-    const coloresAño = ['#FAFF00', '#80F6FF', '#2A1552'];
+    const coloresAnio = ['#FAFF00', '#80F6FF', '#2A1552'];
+
+    let manyBodyStrength = 3;
+    let xStrength = 0.1;
 
     /* Variables para el scroller1 */
     let count
@@ -125,13 +138,6 @@
             });
         });
     });
-
-    onMount(() => {
-    d3.csv("./jugadores.csv", d3.autoType).then(data => {
-        jugadores = data;
-        });
-    });
-
 
 </script>
 <main>
@@ -553,322 +559,30 @@
             </div>
             <img src="images/gol.png" alt="">
         </div>
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_test}
+                    x={xKey}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
                 >
-                    <div slot="background" class="background-scroller">
-                        <h3>Posiciones</h3>
-                        <div class="grafico">
-                            <!--Posicion-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey1}
-                                z={zKey}
-                                xScale={d3.scaleBand()}
-                                zScale={d3.scaleOrdinal()}
-                                xDomain={["Arquero", "Defensor", "Mediocampista", "Delantero"]}
-                                zRange={coloresAño}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={5}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
-        </div>
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
-                >
-                    <div slot="background" class="background-scroller">
-                        <h3>Liga en la que juegan</h3>
-                        <div class="grafico">
-                            <!--Liga donde juegan-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey2}
-                                z={zKey}
-                                xScale={d3.scaleBand()}
-                                zScale={d3.scaleOrdinal()}
-                                xDomain={["Argentina", "España", "Italia", "Francia", "Inglaterra", "Portugal", "Mexico/USA"]}
-                                zRange={coloresAño}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={7}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                                
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
-        </div>
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
-                >
-                    <div slot="background" class="background-scroller">
-                        <h3>Partidos jugados en el mundial</h3>
-                        <div class="grafico">
-                            <!--Partidos jugados-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey3}
-                                z={zKey}
-                                zRange={coloresAño}
-                                zScale={d3.scaleOrdinal()}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={7}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                                
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
-        </div>
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
-                >
-                    <div slot="background" class="background-scroller">
-                        <h3>Goles anotados en el mundial</h3>
-                        <div class="grafico">
-                            <!--Goles-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey4}
-                                z={zKey}
-                                zRange={coloresAño}
-                                zScale={d3.scaleOrdinal()}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={7}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                                
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
-        </div>
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
-                >
-                    <div slot="background" class="background-scroller">
-                        <h3>Debut mundialista</h3>
-                        <div class="grafico">
-                            <!--Debut mundialista-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey5}
-                                z={zKey}
-                                xScale={d3.scaleBand()}
-                                zScale={d3.scaleOrdinal()}
-                                zRange={coloresAño}
-                                xDomain={["Debut mundialista", "Ya jugaron un mundial"]}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={7}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                                
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
-        </div>
-        
-        <div class="grafico-scroller">
-            <Scroller
-                top={top4}
-                threshold={threshold4}
-                bottom={bottom4}
-                bind:count={count4}
-                bind:index={index4}
-                bind:offset={offset4}
-                bind:progress={progress4}
-                >
-                    <div slot="background" class="background-scroller">
-                        <h3>Cantidad de mundiales jugados</h3>
-                        <div class="grafico">
-                            <!--Cantidad mundiales-->
-                            <LayerCake
-                                padding={{bottom: 15}}
-                                x={xKey6}
-                                z={zKey}
-                                zRange={coloresAño}
-                                zScale={d3.scaleOrdinal()}
-                                data={jugadores}
-                            >
-                
-                                <Svg>
-                                    <AxisX
-                                        baseline
-                
-                                    />
-                                    <Beeswarm
-                                        r={r}
-                                        spacing={7}
-                                        getTitle={d => `${d["nombre"]}`}
-                                    />
-                                </Svg>
-                                
-                            </LayerCake>
-                        </div>
-                    </div>
-                    <div slot="foreground" class="foreground_container">
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                        <section class="step_foreground-analisis">
-                            <div class="foreground-analisis">
-                                <p>...</p>
-                            </div>
-                        </section>
-                    </div>
-            </Scroller>
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -880,6 +594,10 @@
 
 <!-- Estilos CSS -->
 <style>
+    .chart-container {
+    width: 100%;
+    height: 250px;
+    }
     .grafico{
         width: 85%;
         height: 500px;
