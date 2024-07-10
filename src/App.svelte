@@ -711,10 +711,10 @@
 <style>
     .chart-container {
         width: 100%;
-        height: 250px;
+        height: 400px;
     }
     .grafico{
-        width: 85%;
+        width: 80%;
         height: 500px;
     }
     .step_foreground-analisis{
