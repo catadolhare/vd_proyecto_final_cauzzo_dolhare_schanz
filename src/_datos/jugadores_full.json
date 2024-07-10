@@ -10,7 +10,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/emilianomartinez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -23,7 +23,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/geronimorulli.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -36,7 +36,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
         "imagen": "images/2022/francoarmani.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -49,7 +49,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/gonzalomontiel.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -62,7 +62,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/2022/nicolasotamendi.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -75,7 +75,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/nahuelmolina.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -88,7 +88,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/cristianromero.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -101,7 +101,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/germanpezzella.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -114,7 +114,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/lisandromartinez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -127,7 +127,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
         "imagen": "images/2022/marcosacuna.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -140,7 +140,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
         "imagen": "images/2022/nicolastagliafico.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -153,7 +153,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/juanfoyth.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -166,7 +166,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/leandroparedes.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -179,7 +179,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/guidorodriguez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -192,7 +192,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/rodrigodepaul.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -205,7 +205,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/exequielpalacios.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -218,7 +218,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/alexismacallister.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -231,7 +231,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/enzofernandez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -244,7 +244,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 4,
         "imagen": "images/2022/angeldimaria.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -257,20 +257,20 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/alejandrogomez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
         "nombre": "Thiago Almada",
         "posicion": "Mediocampista",
         "club": "Atlanta United",
-        "pais": "Estados Unidos",
+        "pais": "USA/Mexico",
         "partidos_jugados": 1,
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/thiagoalmada.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -283,7 +283,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/angelcorrea.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -296,7 +296,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/julianalvarez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -309,7 +309,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/2022/lautaromartinez.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -322,7 +322,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 5,
         "imagen": "images/2022/lionelmessi.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 2022,
@@ -335,7 +335,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
         "imagen": "images/2022/paulodybala.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -348,7 +348,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1986/luisislas.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -361,20 +361,20 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/1986/nerypumpido.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
         "nombre": "Héctor Miguel Zelada",
         "posicion": "Arquero",
         "club": "América",
-        "pais": "Mexico",
+        "pais": "USA/Mexico",
         "partidos_jugados": 0,
         "goles": 0,
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/hectorzelada.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -387,7 +387,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/josebrown.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -400,7 +400,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/nestorclausen.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -413,7 +413,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/1986/danielpassarella.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -426,7 +426,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 3,
         "imagen": "images/1986/oscarruggeri.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -439,7 +439,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/oscargarre.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -452,7 +452,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/1986/julioolarticoechea.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -465,7 +465,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1986/sergiobatista.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -478,7 +478,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/josecuciuffo.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -491,7 +491,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/claudioborghi.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -504,7 +504,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1986/jorgeburruchaga.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -517,7 +517,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/hectorenrique.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -530,7 +530,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1986/ricardogiusti.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -543,7 +543,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/ricardobochini.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -556,7 +556,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/carlostapia.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -569,7 +569,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/marcelotrobbiani.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -582,7 +582,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 4,
         "imagen": "images/1986/diegomaradona.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -595,7 +595,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/sergioalmiron.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -608,7 +608,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1986/pedropasculli.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1986,
@@ -621,7 +621,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 2,
         "imagen": "images/1986/jorgevaldano.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -634,7 +634,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/hectorbaley.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -647,7 +647,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/1978/ubaldofillol.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -660,12 +660,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/ricardolavolpe.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Daniel Passarella",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "River Plate",
         "pais": "Argentina",
         "partidos_jugados": 7,
@@ -673,12 +673,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 3,
         "imagen": "images/1978/danielpassarella.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Alberto Tarantini",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "Boca Juniors",
         "pais": "Argentina",
         "partidos_jugados": 7,
@@ -686,12 +686,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/albertotarantini.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Miguel Oviedo",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "Talleres de Córdoba",
         "pais": "Argentina",
         "partidos_jugados": 1,
@@ -699,12 +699,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/migueloviedo.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Luis Galván",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "Talleres de Córdoba",
         "pais": "Argentina",
         "partidos_jugados": 7,
@@ -712,12 +712,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/luisgalvan.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Daniel Killer",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "Racing",
         "pais": "Argentina",
         "partidos_jugados": 0,
@@ -725,12 +725,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/danielkiller.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Jorge Olguin",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "San Lorenzo",
         "pais": "Argentina",
         "partidos_jugados": 7,
@@ -738,12 +738,12 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/jorgeolguin.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
         "nombre": "Oscar Rúben Pagnanini",
-        "posicion": "Defensa",
+        "posicion": "Defensor",
         "club": "Independiente",
         "pais": "Argentina",
         "partidos_jugados": 0,
@@ -751,7 +751,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/oscarpagnanini.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -764,7 +764,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/osvaldoardiles.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -777,7 +777,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/americogallego.png",
-        "value": 0.5
+        "value": 10
         
     },
     {
@@ -791,7 +791,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/rubengalvan.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -804,7 +804,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/oscarortiz.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -817,7 +817,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/josevalencia.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -830,7 +830,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/ricardovilla.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -843,7 +843,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/norbertoalonso.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -856,7 +856,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/omarlarrosa.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -869,7 +869,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/leopoldoluque.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -882,7 +882,7 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 3,
         "imagen": "images/1978/mariokempes.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -895,7 +895,7 @@
         "debut_mundialista": "si",
         "cantidad_mundiales": 2,
         "imagen": "images/1978/danielbertoni.png",
-        "value": 0.5
+        "value": 10
     },
     {
         "anio": 1978,
@@ -908,6 +908,6 @@
         "debut_mundialista": "no",
         "cantidad_mundiales": 1,
         "imagen": "images/1978/renehouseman.png",
-        "value": 0.5
+        "value": 10
     }
 ]

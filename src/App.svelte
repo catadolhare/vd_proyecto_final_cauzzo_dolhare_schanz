@@ -13,23 +13,14 @@
 
     let datos=[];
 
-    let jugadores_test = [
-        {anio: 2022, nombre: "Emiliano Martínez", posicion: "Arquero", value: 10},
-        {anio: 2022, nombre: "Nicolás Otamendi", posicion: "Defensor", value: 10},
-        {anio: 2022, nombre: "Ángel Di María", posicion: "Mediocampista", value: 10},
-        {anio: 2022, nombre: "Lionel Messi", posicion: "Delantero", value: 10},
-        {anio: 1986, nombre: "Nery Pumpido", posicion: "Arquero", value: 10},
-        {anio: 1986, nombre: "Óscar Ruggeri", posicion: "Defensor", value: 10},
-        {anio: 1986, nombre: "Sergio Batista", posicion: "Mediocampista", value: 10},
-        {anio: 1986, nombre: "Diego Armando Maradona", posicion: "Delantero", value: 10},
-        {anio: 1978, nombre: "Ubaldo Fillol", posicion: "Arquero", value: 10},
-        {anio: 1978, nombre: "Miguel Oviedo", posicion: "Defensor", value: 10},
-        {anio: 1978, nombre: "Américo Gallego", posicion: "Mediocampista", value: 10},
-        {anio: 1978, nombre: "Mario Kempes", posicion: "Delantero", value: 10}
-    ];
-    let jugadores_full=[];
+    import jugadores_full from './_datos/jugadores_full.json';
 
     const xKey = "posicion";
+    const xKey2 = "pais";
+    const xKey3 = "partidos_jugados";
+    const xKey4 = "goles";
+    const xKey5 = "debut_mundialista";
+    const xKey6 = "cantidad_mundiales";
     const rKey = "value";
     const zKey = "anio"
 
@@ -132,27 +123,10 @@
     onMount(() => {
         d3.csv("./datos_generales.csv", d3.autoType).then((data) => {
             datos = data;
-            console.log(datos);
             datos.forEach(jugador => {
-                console.log(jugador);
                 getImagePath(jugador);
             });
         });
-        fetch('./jugadores_full.json')
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    console.error('Error al cargar el archivo JSON:', response.statusText);
-                }
-            })
-            .then(datas => {
-                jugadores_full = datas;
-                console.log(jugadores_full);
-            })
-            .catch(error => {
-                console.error('Error al cargar el archivo JSON:', error);
-            });
     });
 
 </script>
@@ -600,6 +574,131 @@
                 </LayerCake>
             </div>
         </div>
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_full}
+                    x={xKey2}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
+                >
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
+        </div>
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_full}
+                    x={xKey3}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
+                >
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
+        </div>
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_full}
+                    x={xKey4}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
+                >
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
+        </div>
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_full}
+                    x={xKey5}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
+                >
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
+        </div>
+        <div class="grafico">            
+            <div class="chart-container">
+                <LayerCake
+                    data={jugadores_full}
+                    x={xKey6}
+                    r={rKey}
+                    z={zKey}
+                    xScale={d3.scaleBand()}
+                    zScale={d3.scaleOrdinal()}
+                    zRange={coloresAnio}
+                >
+                    <Svg>
+                        <AxisX 
+                            tickMarks
+                        />
+                        <ForceLayout
+                            manyBodyStrength={manyBodyStrength}
+                            xStrength={xStrength}
+                            groupBy={groupBy}
+                            nodeStroke="#000"
+                        />
+                    </Svg>
+                </LayerCake>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <p>Camila Cauzzo</p>
@@ -611,8 +710,8 @@
 <!-- Estilos CSS -->
 <style>
     .chart-container {
-    width: 100%;
-    height: 250px;
+        width: 100%;
+        height: 250px;
     }
     .grafico{
         width: 85%;
