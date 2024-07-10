@@ -925,9 +925,14 @@
         </Scroller>
     </div>
     <div class="footer">
-        <p>Camila Cauzzo</p>
-        <p>Catalina Dolhare</p>
-        <p>Joaquin Schanz</p>
+        <div class="paper">
+            <img src="images/paper_celeste_abajo.png" alt="paper">
+        </div>
+        <div class="nombres">
+            <p>Camila Cauzzo</p>
+            <p>Catalina Dolhare</p>
+            <p>Joaquin Schanz</p>
+        </div>
     </div>
 </main>
 
@@ -1474,14 +1479,17 @@
         height: 20px;
     }
     .footer{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #2A1552;
-        height: 10vh;
+        background-color: #84DFED;
+        padding-bottom: 20px;
     }
     .footer p{
         color: white;
         margin: 0;
+    }
+    .nombres{
+        padding: 0px 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 </style>
