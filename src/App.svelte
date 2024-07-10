@@ -549,156 +549,343 @@
             </div>
             <img src="images/gol.png" alt="">
         </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey2}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey3}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey4}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey5}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
-        <div class="grafico">            
-            <div class="chart-container">
-                <LayerCake
-                    data={jugadores_full}
-                    x={xKey6}
-                    r={rKey}
-                    z={zKey}
-                    xScale={d3.scaleBand()}
-                    zScale={d3.scaleOrdinal()}
-                    zRange={coloresAnio}
-                >
-                    <Svg>
-                        <AxisX 
-                            tickMarks
-                        />
-                        <ForceLayout
-                            manyBodyStrength={manyBodyStrength}
-                            xStrength={xStrength}
-                            groupBy={groupBy}
-                            nodeStroke="#000"
-                        />
-                    </Svg>
-                </LayerCake>
-            </div>
-        </div>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Posiciones</h3>
+                    <div class="grafico">            
+                        <div class="chart-container">
+                            <LayerCake
+                                data={jugadores_full}
+                                x={xKey}
+                                r={rKey}
+                                z={zKey}
+                                xScale={d3.scaleBand()}
+                                zScale={d3.scaleOrdinal()}
+                                zRange={coloresAnio}
+                            >
+                                <Svg>
+                                    <AxisX 
+                                        tickMarks
+                                    />
+                                    <ForceLayout
+                                        manyBodyStrength={manyBodyStrength}
+                                        xStrength={xStrength}
+                                        groupBy={groupBy}
+                                        nodeStroke="#000"
+                                    />
+                                </Svg>
+                            </LayerCake>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Las tres selecciones optaron por llevar tres arquero, numero comun para todas las selecciones mundiales.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En promedio, las selecciones llevaron 7 defensores, 9  mediocampistas y 4 delanteros</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Se evidencian diferencias en la forma que cada DT planteó al equipo; mientras que la de 2022 y la de 1978 demuestran un balance entre el mediocampo y la defensa, la de 1986 llevo casi el doble de mediocampistas que de defensores.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En 1978 y 1986, los planteles estaban conformados por 23 jugadores. Mientras que en 2022, el plantel contaba con 26 jugadores.</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Pais en el que juegan</h3>
+                    <div class="grafico">            
+                        <div class="chart-container">
+                            <LayerCake
+                                data={jugadores_full}
+                                x={xKey2}
+                                r={rKey}
+                                z={zKey}
+                                xScale={d3.scaleBand()}
+                                zScale={d3.scaleOrdinal()}
+                                zRange={coloresAnio}
+                            >
+                                <Svg>
+                                    <AxisX 
+                                        tickMarks
+                                    />
+                                    <ForceLayout
+                                        manyBodyStrength={manyBodyStrength}
+                                        xStrength={xStrength}
+                                        groupBy={groupBy}
+                                        nodeStroke="#000"
+                                    />
+                                </Svg>
+                            </LayerCake>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Para el mundial de 1978, la gran mayoría de jugadores jugaba en Argentina. Los unicos dos jugadores que lo hacian en el exterior eran Mario Kempes en el Valencia FC (España) y Daniel Bertoni en el Sevilla FC (España)</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En 1986, podemos ver que ya se contaba con más jugadores en el exterior, aunque predominaban los equipos argentinos. Entre estos jugadores, se tenía a Diego Maradona en el Napoli (Italia), Daniel Passarella en la Fiorentina (Italia) y Jorge Luís Burruchaga en el Nantes (Francia)</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Para el 2022, solo se contaba con un jugador local, Franco Armani en River Plate. El resto pertenecian a clubes extranjeros. La gran mayoría juegan en España en clubes como el Atletico de Madrid o Sevilla, o en Inglaterra en clubes como el Tottenham.</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Partidos jugados</h3>
+                    <div class="grafico">            
+                        <div class="chart-container">
+                            <LayerCake
+                                data={jugadores_full}
+                                x={xKey3}
+                                r={rKey}
+                                z={zKey}
+                                xScale={d3.scaleBand()}
+                                zScale={d3.scaleOrdinal()}
+                                zRange={coloresAnio}
+                            >
+                                <Svg>
+                                    <AxisX 
+                                        tickMarks
+                                    />
+                                    <ForceLayout
+                                        manyBodyStrength={manyBodyStrength}
+                                        xStrength={xStrength}
+                                        groupBy={groupBy}
+                                        nodeStroke="#000"
+                                    />
+                                </Svg>
+                            </LayerCake>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En promedio, son solo 8 jugadores los que disputaron todo el mundial. Entre estos jugadores, se destacan Mario Kempes (1978), Daniel Passarella (1978), Diego Armando Maradona (1986), Óscar Ruggeri (1986), Lionel Messi (2022) y Rodrigo De Paul (2022), todos siendo jugadores claves para la selección en sus respectivos mundiales.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En 2022, todos los jugadores de cancha disputaron por lo menos un partido. Los unicos dos quienes no ingresaron fueron los arqueros suplentes: Franco Armani y Gerónimo Rulli</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>En los tres mundiales, los unicos que atajaron fueron los arqueros titulares: Ubaldo Fillol (1978), Nery Pumpido (1986), Emiliano Martínez (2022)</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Goles</h3>
+                    <div class="grafico">            
+                        <div class="chart-container">
+                            <LayerCake
+                                data={jugadores_full}
+                                x={xKey4}
+                                r={rKey}
+                                z={zKey}
+                                xScale={d3.scaleBand()}
+                                zScale={d3.scaleOrdinal()}
+                                zRange={coloresAnio}
+                            >
+                                <Svg>
+                                    <AxisX 
+                                        tickMarks
+                                    />
+                                    <ForceLayout
+                                        manyBodyStrength={manyBodyStrength}
+                                        xStrength={xStrength}
+                                        groupBy={groupBy}
+                                        nodeStroke="#000"
+                                    />
+                                </Svg>
+                            </LayerCake>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Son pocos los jugadores que convirtieron por lo menos un gol en sus respectivos mundiales. En promedio, 7 jugadores distintos anotaron un gol o más en cada competencia.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Lionel Messi (2022) y Diego Maradona (1986) comparten la punta sobre más goles convertidos en sus mundiales con 7 goles cada uno, promediando un gol por partido.</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Debut mundialista</h3>
+                    <div class="grafico">            
+                        <div class="chart-container">
+                            <LayerCake
+                                data={jugadores_full}
+                                x={xKey5}
+                                r={rKey}
+                                z={zKey}
+                                xScale={d3.scaleBand()}
+                                zScale={d3.scaleOrdinal()}
+                                zRange={coloresAnio}
+                            >
+                                <Svg>
+                                    <AxisX 
+                                        tickMarks
+                                    />
+                                    <ForceLayout
+                                        manyBodyStrength={manyBodyStrength}
+                                        xStrength={xStrength}
+                                        groupBy={groupBy}
+                                        nodeStroke="#000"
+                                    />
+                                </Svg>
+                            </LayerCake>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Los tres equipos se destacan por tener un plantel nuevo. La gran mayoría de los jugadores tuvieron su debut mundialista el mismo año el cual salieron campeones.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Entre los tres mundiales, en 2022 fue cuando se conto con más experimentados: Franco Armani (2018, 2022), Nicolas Otamendi (2010, 2018, 2022), Marcos Acuña (2018, 2022), Nicolas Tagliafico (2018, 2022), Ángel Di María (2010, 2014, 2018, 2022), Lionel Messi (2006, 2010, 2014, 2018, 2022), Paulo Dybala (2018, 2022).</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Emiliano Martinez es el unico arquero en debutar en su resepctivo mundial y ser el titular. Nery Pumpido (1986) y Ubaldo Fillol (1978) ya habrían jugado un mundial anteriormente.</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
+        <Scroller
+            top={top4}
+            threshold={threshold4}
+            bottom={bottom4}
+            bind:count={count4}
+            bind:index={index4}
+            bind:offset={offset4}
+            bind:progress={progress4}
+            >
+                <div slot="background" class="background-scroller">
+                    <h3>Cantidad de mundiales jugados en su carrera</h3>
+                    <div class="grafico">            
+                        <div class="grafico">            
+                            <div class="chart-container">
+                                <LayerCake
+                                    data={jugadores_full}
+                                    x={xKey6}
+                                    r={rKey}
+                                    z={zKey}
+                                    xScale={d3.scaleBand()}
+                                    zScale={d3.scaleOrdinal()}
+                                    zRange={coloresAnio}
+                                >
+                                    <Svg>
+                                        <AxisX 
+                                            tickMarks
+                                        />
+                                        <ForceLayout
+                                            manyBodyStrength={manyBodyStrength}
+                                            xStrength={xStrength}
+                                            groupBy={groupBy}
+                                            nodeStroke="#000"
+                                        />
+                                    </Svg>
+                                </LayerCake>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div slot="foreground" class="foreground_container">
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>La mayoría de los jugadores solo han tenido la oportunidad de jugar un mundial. Mayoritariamente, este grupo es conformado por jugadores del 2022 dado que no se ha jugado otro mundial aún.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>La lista es liderada por Lionel Messi con 5 mundiales (2006, 2010, 2014, 2018, 2022), siendo el argentino con más mundiales disputados. Seguido de él, se encuentras Ángel Di María (2010, 2014, 2018, 2022) y Diego Maradona (1982, 1986, 1990, 1994) con 4 mundiales.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Daniel Passarella es el único jugador argentino en consagrarse dos veces campeón del mundo, pudiendo levantar la copa en 1978 y 1986.</p>
+                        </div>
+                    </section>
+                    <section class="step_foreground-analisis">
+                        <div class="foreground-analisis">
+                            <p>Como entrenadores, Diego Maradona (2010) y Daniel Passarella (1998) disputaron un mundial.</p>
+                        </div>
+                    </section>
+                </div>
+        </Scroller>
     </div>
     <div class="footer">
         <p>Camila Cauzzo</p>
@@ -725,8 +912,12 @@
     }
     .foreground-analisis{
         width: 300px;
-        height: 150px;
-        background-color: red;
+        border:2px solid #2A1552;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .foreground-analisis p{
+        margin:0;
     }
     p{
         font-family: "Quicksand", sans-serif;
