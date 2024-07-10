@@ -281,7 +281,9 @@
         <h2>El mundo unido por una pasión</h2>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="329" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                <div class="conjunto-grafico">
+                    <iframe title="Mundial 1978" aria-label="Map" id="datawrapper-chart-oL8XV" src="https://datawrapper.dwcdn.net/oL8XV/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="329" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                </div>
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -301,14 +303,16 @@
                 <img src="images/foto1986.png" alt="">
             </div>
             <div class="grafico_paises">
-                <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="343" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                
+                <div class="conjunto-grafico">
+                    <iframe title="Mundial 1986" aria-label="Map" id="datawrapper-chart-BWQLZ" src="https://datawrapper.dwcdn.net/BWQLZ/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="343" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                </div>
             </div>
         </div>
         <div class="paises">
             <div class="grafico_paises">
-                <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="314" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
-                
+                <div class="conjunto-grafico">
+                    <iframe title="Mundial 2022" aria-label="Mapa" id="datawrapper-chart-4ppPT" src="https://datawrapper.dwcdn.net/4ppPT/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="314" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                </div>
             </div>
             <div class="info-mundial">
                 <div class="texto-paises">
@@ -1129,15 +1133,21 @@
         padding: 10px 0;
     }
     .grafico_paises{
-        padding: 0 20px;
+        padding: 0;
         width: 50%;
         height: 70%;
         display: flex; /* Para centrar la imagen dentro de la columna */
         flex-direction: column;
-        margin: 0 10px;
+        justify-content: center;
+        align-items: center;
     }
-    .grafico_paises iframe{
-        width: 85%;
+    .conjunto-grafico{
+        background-color: #84DFED;
+        width: 70%;
+        margin-top: 30px;
+    }
+    .conjunto-grafico iframe{
+        width: 100%;
         height: auto;
         margin-top: 40px;
     }
