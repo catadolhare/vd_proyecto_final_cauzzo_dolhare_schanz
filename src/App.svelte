@@ -149,11 +149,11 @@
             <img src="images/Portada_5.png" alt="Portada" style="width: 100%; height: auto;">
         </div>
         <div class="intro1">
-            <p>Una comparativa de las tres seleccionas argentinas que se hicieron con el campeonato del mundo</p>
+            <h5>Una comparativa de las tres seleccionas argentinas que se hicieron con el campeonato del mundo</h5>
             <p>------------------------------------------------------------------------------------</p>
-            <h5>¿Quiénes fueron los protagonistas?</h5>
-            <h5>¿Qué los hizo ganar?</h5>
-            <h5>¿En qué se diferecian y en qué se asemejan?</h5>
+            <p>¿Quiénes fueron los protagonistas?</p>
+            <p>¿Qué los hizo ganar?</p>
+            <p>¿En qué se diferecian y en qué se asemejan?</p>
         
             <button class="button" on:click={toggleInfo}>
                 <h5 style="color: #DBED0B; font-style: bold;">Tocá para musicalizar</h5>
@@ -345,7 +345,7 @@
                                     {#each datos as jugador}
                                         {#if jugador.anio===1978}
                                             <div class="contenedor-futbolista">
-                                                <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <button class="futbolista1978"  on:click={() => toggleInfoJ(jugador)}>
                                                 <img src={getImagePath(jugador)} alt={jugador.nombre} class="img-jugador">
                                                 </button>
                                             </div>
@@ -420,7 +420,7 @@
                                     {#each datos as jugador}
                                         {#if jugador.anio===1986}
                                             <div class="contenedor-futbolista">
-                                                <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                <button class="futbolista1986" on:click={() => toggleInfoJ(jugador)}>
                                                     <img src={getImagePath(jugador)} alt={jugador.nombre} class="img-jugador">
                                                 </button>
                                             </div>
@@ -495,7 +495,7 @@
                                     {#each datos as jugador}
                                         {#if jugador.anio===2022}
                                                 <div class="contenedor-futbolista">
-                                                    <button class="futbolista" on:click={() => toggleInfoJ(jugador)}>
+                                                    <button class="futbolista2022" on:click={() => toggleInfoJ(jugador)}>
                                                         <img src={getImagePath(jugador)} alt={jugador.nombre} class="img-jugador">
                                                     </button>
                                                 </div>
@@ -975,11 +975,15 @@
         justify-content: center;
         align-items: center;
     }
-    .intro1{
-        text-align: center;
+    .intro1 {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        height: 80vh;
         margin-top: 30px;
         margin-bottom: 30px;
-        height: 50vh;
+        text-align: center;
     }
     .intro2{
         display: flex;
@@ -1025,9 +1029,7 @@
         height: 70%;
         display: flex; /* Para centrar la imagen dentro de la columna */
         flex-direction: column;
-        background-image: url(images/fondo_paises.png); /* Solo para visualización */
         margin: 0 10px;
-        background-size: 100%; /* Ajusta el tamaño de la imagen de fondo al 50% del contenedor */
     }
     .grafico_paises iframe{
         width: 85%;
@@ -1042,11 +1044,11 @@
         justify-content: center;
         align-items: center;
     }
-    .texto-paises h3{
+    .texto-paises h3 {
         font-size: 50px;
         display: inline;
-        color: #FAFF00;
-        
+        color: #faff00;
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
     }
     .texto-paises p{
         display: inline;
@@ -1254,9 +1256,9 @@
     .contenedor-futbolista{
         width: 100px;
         height: 100px;
-        }
-    .futbolista{
-        background-color:#2A1552;
+    }
+    .futbolista1978{
+        background-color: #FAFF00;
         display: flex;
         margin: 5px;
         overflow: hidden;
@@ -1265,6 +1267,31 @@
         cursor: pointer;
         align-content: center;
         border: none;
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35);
+    }
+    .futbolista1986{
+        background-color: #80F6FF;
+        display: flex;
+        margin: 5px;
+        overflow: hidden;
+        border-radius: 50%;
+        padding: 5px 10px;
+        cursor: pointer;
+        align-content: center;
+        border: none;
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35);
+    }
+    .futbolista2022{
+        background-color: #2A1552;
+        display: flex;
+        margin: 5px;
+        overflow: hidden;
+        border-radius: 50%;
+        padding: 5px 10px;
+        cursor: pointer;
+        align-content: center;
+        border: none;
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.35);
     }
     .info-futbolista{
         width: 20%;
