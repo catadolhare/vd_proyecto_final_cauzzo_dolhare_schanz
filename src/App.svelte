@@ -127,6 +127,14 @@
                 getImagePath(jugador);
             });
         });
+        d3.selectAll('.chart-container-pais g')
+            .attr('transform', 'translate(-200,0)'); 
+        d3.selectAll('.chart-container-partido g')
+            .attr('transform', 'translate(50,0)'); 
+        d3.selectAll('.chart-container-goles g')
+            .attr('transform', 'translate(-300,0)');
+        d3.selectAll('.chart-container-cantidad g')
+            .attr('transform', 'translate(-300,0)');
     });
 
 </script>
@@ -558,7 +566,7 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis">
                     <h3>Posiciones</h3>
                     <div class="grafico">            
                         <div class="chart-container">
@@ -572,9 +580,6 @@
                                 zRange={coloresAnio}
                             >
                                 <Svg>
-                                    <AxisX 
-                                        tickMarks
-                                    />
                                     <ForceLayout
                                         manyBodyStrength={manyBodyStrength}
                                         xStrength={xStrength}
@@ -583,6 +588,12 @@
                                     />
                                 </Svg>
                             </LayerCake>
+                        </div>
+                        <div class="axis">
+                            <p>Arquero</p>
+                            <p>Defensor</p>
+                            <p>Delantero</p>
+                            <p>Mediocampista</p>
                         </div>
                     </div>
                 </div>
@@ -618,10 +629,10 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis">
                     <h3>Pais en el que juegan</h3>
                     <div class="grafico">            
-                        <div class="chart-container">
+                        <div class="chart-container-pais">
                             <LayerCake
                                 data={jugadores_full}
                                 x={xKey2}
@@ -632,17 +643,24 @@
                                 zRange={coloresAnio}
                             >
                                 <Svg>
-                                    <AxisX 
-                                        tickMarks
-                                    />
                                     <ForceLayout
-                                        manyBodyStrength={manyBodyStrength}
+                                        manyBodyStrength={3}
                                         xStrength={xStrength}
                                         groupBy={groupBy}
                                         nodeStroke="#000"
                                     />
                                 </Svg>
                             </LayerCake>
+                        </div>
+                        <div class="axis-pais">
+                            <p>Alemania</p>
+                            <p>Argentina</p>
+                            <p>España</p>
+                            <p>Francia</p>
+                            <p>Inglaterra</p>
+                            <p>Italia</p>
+                            <p>Portugal</p>
+                            <p>USA/Mexico</p>
                         </div>
                     </div>
                 </div>
@@ -673,10 +691,10 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis">
                     <h3>Partidos jugados</h3>
                     <div class="grafico">            
-                        <div class="chart-container">
+                        <div class="chart-container-partido">
                             <LayerCake
                                 data={jugadores_full}
                                 x={xKey3}
@@ -687,9 +705,6 @@
                                 zRange={coloresAnio}
                             >
                                 <Svg>
-                                    <AxisX 
-                                        tickMarks
-                                    />
                                     <ForceLayout
                                         manyBodyStrength={manyBodyStrength}
                                         xStrength={xStrength}
@@ -698,6 +713,16 @@
                                     />
                                 </Svg>
                             </LayerCake>
+                        </div>
+                        <div class="axis-partido">
+                            <p>0</p>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                            <p>7</p>
                         </div>
                     </div>
                 </div>
@@ -728,10 +753,10 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis">
                     <h3>Goles</h3>
                     <div class="grafico">            
-                        <div class="chart-container">
+                        <div class="chart-container-goles">
                             <LayerCake
                                 data={jugadores_full}
                                 x={xKey4}
@@ -742,9 +767,6 @@
                                 zRange={coloresAnio}
                             >
                                 <Svg>
-                                    <AxisX 
-                                        tickMarks
-                                    />
                                     <ForceLayout
                                         manyBodyStrength={manyBodyStrength}
                                         xStrength={xStrength}
@@ -753,6 +775,16 @@
                                     />
                                 </Svg>
                             </LayerCake>
+                        </div>
+                        <div class="axis-goles">
+                            <p>0</p>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                            <p>7</p>
                         </div>
                     </div>
                 </div>
@@ -778,10 +810,10 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis">
                     <h3>Debut mundialista</h3>
                     <div class="grafico">            
-                        <div class="chart-container">
+                        <div class="chart-container-debut">
                             <LayerCake
                                 data={jugadores_full}
                                 x={xKey5}
@@ -792,9 +824,6 @@
                                 zRange={coloresAnio}
                             >
                                 <Svg>
-                                    <AxisX 
-                                        tickMarks
-                                    />
                                     <ForceLayout
                                         manyBodyStrength={manyBodyStrength}
                                         xStrength={xStrength}
@@ -803,6 +832,10 @@
                                     />
                                 </Svg>
                             </LayerCake>
+                        </div>
+                        <div class="axis-debut">
+                            <p>Ya jugaron</p>
+                            <p>Debut mundialista</p>
                         </div>
                     </div>
                 </div>
@@ -833,11 +866,11 @@
             bind:offset={offset4}
             bind:progress={progress4}
             >
-                <div slot="background" class="background-scroller">
+                <div slot="background" class="background-scroller-analisis" style="padding-top:150px;">
                     <h3>Cantidad de mundiales jugados en su carrera</h3>
                     <div class="grafico">            
                         <div class="grafico">            
-                            <div class="chart-container">
+                            <div class="chart-container-cantidad">
                                 <LayerCake
                                     data={jugadores_full}
                                     x={xKey6}
@@ -848,9 +881,6 @@
                                     zRange={coloresAnio}
                                 >
                                     <Svg>
-                                        <AxisX 
-                                            tickMarks
-                                        />
                                         <ForceLayout
                                             manyBodyStrength={manyBodyStrength}
                                             xStrength={xStrength}
@@ -859,6 +889,14 @@
                                         />
                                     </Svg>
                                 </LayerCake>
+                            </div>
+                            <div class="axis-cantidad">
+                                <p>0</p>
+                                <p>1</p>
+                                <p>2</p>
+                                <p>3</p>
+                                <p>4</p>
+                                <p>5</p>
                             </div>
                         </div>
                     </div>
@@ -900,9 +938,64 @@
         width: 100%;
         height: 400px;
     }
+    .chart-container-pais {
+        width: 100%;
+        height: 400px;
+    }
+    .chart-container-partido {
+        width: 100%;
+        height: 400px;
+    }
+    .chart-container-goles {
+        width: 100%;
+        height: 400px;
+    }
+    .chart-container-debut {
+        width: 100%;
+        height: 400px;
+    }
+    .chart-container-cantidad {
+        width: 100%;
+        height: 400px;
+    }
     .grafico{
-        width: 80%;
-        height: 500px;
+        height: 700px;
+        margin-bottom: 20px; 
+    }
+    .axis{
+        display: flex;
+        justify-content: space-between;
+        padding-left:  5px; 
+        padding-right: 110px;
+    }
+    .axis-pais{
+        display: flex;
+        justify-content: space-around;
+        padding-right: 30px;
+    }
+    .axis-partido{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 90px;
+        padding-left: 20px;
+    }
+    .axis-goles{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 50px;
+        padding-left: 70px;
+    }
+    .axis-debut{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 300px;
+        padding-left: 70px;
+    }
+    .axis-cantidad{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 130px;
+        padding-left: 55px;
     }
     .step_foreground-analisis{
         display: flex;
@@ -911,13 +1004,21 @@
         height: 90vh;
     }
     .foreground-analisis{
-        width: 300px;
+        width: 250px;
         border:2px solid #2A1552;
         border-radius: 5px;
         padding: 10px;
     }
     .foreground-analisis p{
         margin:0;
+    }
+    .background-scroller-analisis{
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
     }
     p{
         font-family: "Quicksand", sans-serif;
